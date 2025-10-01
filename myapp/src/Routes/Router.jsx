@@ -6,6 +6,9 @@ import Rooms from "../Components/Rooms/Rooms.jsx";
 import Offers from "../Components/Offers/Offers.jsx";
 import Facilities from "../Components/Facilities/Facilities.jsx";
 
+//inner pages
+import Room from "../Pages/InnerPage/Room";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +19,10 @@ const router = createBrowserRouter([
       { path: "rooms", element: <Rooms /> },     // ✅ /rooms
       { path: "offers", element: <Offers /> },   // ✅ /offers
       { path: "facilities", element: <Facilities /> }, // ✅ /facilities
+      {
+        path: "/room",
+        element: <Room />,
+      },
     ],
   },
 ]);
