@@ -8,6 +8,7 @@
 */
 /* Google Fonts Link */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 /* Tailwind  layer configure */
 @tailwind base;
@@ -45,14 +46,14 @@
 }
 
 .btn-secondary {
-  @apply border border-white w-[145px] sm:w-[155px] lg:w-[170px] 2xl:w-[185px] 3xl:w-[192px] h-[48px] lg:h-[52px] 2xl:h-[60px] relative before:w-8 before:h-[1px] before:bg-white before:absolute before:left-0  md:before:top-[60px] lg:before:top-[65px] 2xl:before:top-[70px] text-white uppercase text-sm lg:text-base font-medium font-Garamond hover-animBg after:rounded-none hover:border-khaki hover:before:bg-khaki transition-all duration-300;
+  @apply border border-lightBlack w-[145px] sm:w-[155px] lg:w-[170px] 2xl:w-[185px] 3xl:w-[192px] h-[48px] lg:h-[52px] 2xl:h-[60px] relative before:w-8 before:h-[1px] before:bg-lightBlack before:absolute before:left-0  md:before:top-[60px] lg:before:top-[65px] 2xl:before:top-[70px] text-lightBlack uppercase text-sm lg:text-base font-medium font-inter hover-animBg after:rounded-none hover:border-green hover:before:bg-green transition-all duration-300;
 }
 
 .btn-items {
   @apply border border-lightBlack dark:border-white  w-[145px] sm:w-[155px] lg:w-[170px] 2xl:w-[185px] 3xl:w-[192px] h-[48px] relative before:w-8 before:h-[1px] before:bg-lightBlack dark:before:bg-white before:absolute before:left-0 before:top-14 text-lightBlack dark:text-white uppercase text-sm sm:text-base font-medium font-Garamond hover-animBg after:rounded-none hover:border-khaki hover:before:bg-khaki hover:text-white transition-all duration-300;
 }
 .btn-subscribe {
-  @apply h-[56px] bg-khaki w-full text-white uppercase text-base font-medium  font-Garamond;
+  @apply h-[56px] bg-khaki w-full text-white  uppercase text-base font-medium  font-Garamond;
 }
 
 /* video animation */

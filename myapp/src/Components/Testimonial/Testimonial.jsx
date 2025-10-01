@@ -27,7 +27,7 @@ const Testimonial = () => {
   });
 
   return (
-    <section className="bg-[url('/images/home-1/testi-bg.jpg')] bg-[rgba(30,30,30,0.4)] dark:bg-[rgba(30,30,30,0.6)] bg-opacity-40 grid items-center justify-center bg-no-repeat bg-cover">
+    <section className="bg-[url('/images/home/background.png')] bg-[rgba(30,30,30,0.4)] dark:bg-[rgba(30,30,30,0.6)] bg-opacity-40 grid items-center justify-center bg-no-repeat bg-cover font-Inter">
       <div className="Container py-20 lg:py-[120px]">
         {/* section title */}
         <div
@@ -37,21 +37,17 @@ const Testimonial = () => {
         >
           {/* Section logo */}
           <div className="flex items-center justify-center space-x-2 mb-4 lg:mb-5">
-            <hr className="w-[100px] h-[1px]  text-[#473f39] " />
-            <img
-              src="/images/home-1/section-shape1.png"
-              alt="room_section_logo"
-              className="w-[50px] h-[50px]"
-            />
-            <hr className="w-[100px] h-[1px]  text-[#473f39] " />
+            <hr className="w-[100px] h-[1px]  text-lightBlack " />
+          
+            <hr className="w-[100px] h-[1px]  text-lightBlack " />
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-3xl 2xl:text-[38px] leading-[42px] 2xl:leading-[52px] text-white mt-[20px] mb-[16px] font-Garamond font-semibold uppercase">
-            Ustomer’s TestimonialL
+          <h1 className="text-xl sm:text-2xl md:text-3xl 2xl:text-[38px] leading-[42px] 2xl:leading-[52px] text-lightBlack mt-[20px] mb-[16px] font-semibold uppercase">
+            Customer's Testimonial
           </h1>
-          <p className="font-Lora leading-7 lg:leading-[26px] text-white font-normal text-sm sm:text-base">
-            Proactively morph optimal infomediaries rather than accurate
-            expertise. Intrinsicly progressive resources rather than
-            resource-leveling
+          <p className="leading-7 lg:leading-[26px] text-lightBlack font-normal text-sm sm:text-base">
+            Hear from our guests who have experienced the comfort
+  and Bhutanese hospitality at Thim Dorji Resort. Their stories 
+  reflect the memorable stays.
           </p>
         </div>
 
@@ -72,28 +68,12 @@ const Testimonial = () => {
               />
 
               {/* rating icon */}
-              <ul className="flex items-center text-khaki space-x-[4px]">
-                <li>
-                  <FaStar size={"16px"} />
-                </li>
-                <li>
-                  <FaStar size={"16px"} />
-                </li>
-                <li>
-                  <FaStar size={"16px"} />
-                </li>
-                <li>
-                  <FaStar size={"16px"} />
-                </li>
-                <li>
-                  <FaStar size={"16px"} />
-                </li>
-              </ul>
-              <p className="font-Lora text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                “Professionally repurpose flexible testing procedures via molla
+              
+              <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
+                "Professionally repurpose flexible testing procedures via molla
                 in customer service. Dynamically reconceptualize value-added the
                 systems before manufactured products. Enthusiastically
-                envisioneer emerging best”
+                envisioneer emerging best"
               </p>
               <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
 
@@ -105,7 +85,7 @@ const Testimonial = () => {
                 />
 
                 <div className="">
-                  <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold font-Garamond">
+                  <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
                     Maicle clork
                   </h4>
                   <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
@@ -133,46 +113,30 @@ const Testimonial = () => {
               <div className="bg-white dark:bg-normalBlack p-5 md:p-10 relative before:absolute before:w-[85%]  before:h-[10px] before:bg-khaki before:mx-auto before:-top-[10px] before:left-0 before:right-0 after:absolute after:w-[85%] after:h-[10px] after:bg-khaki after:mx-auto after:-bottom-[10px] after:left-0 after:right-0 hidden sm:block">
                 {/* quote icon */}
                 <img
-                  src="/images/home-1/testi-quote.png"
+                  src="/images/home/round.png"
                   alt=""
-                  className="absolute  right-3 xl:right-10 -top-8"
+                  className="absolute  right-3 xl:right-10 -top-8 mt-10"
                 />
 
                 {/* rating icon */}
-                <ul className="flex items-center text-khaki space-x-[4px]">
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                </ul>
-                <p className="font-Lora text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                  “Professionally repurpose flexible testing procedures via
+                
+                <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
+                  "Professionally repurpose flexible testing procedures via
                   molla in customer service. Dynamically reconceptualize
                   value-added the systems before manufactured products.
-                  Enthusiastically envisioneer emerging best”
+                  Enthusiastically envisioneer emerging best"
                 </p>
                 <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
 
                 <div className="flex items-center space-x-6 ">
                   <img
-                    src="/images/home-1/testi-author-2.png"
+                    src="/images/home/boy.jpg"
                     className="w-[65px] h-[65px]"
                     alt=""
                   />
 
                   <div className="">
-                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold font-Garamond">
+                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
                       Marina Trange
                     </h4>
                     <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
@@ -193,47 +157,31 @@ const Testimonial = () => {
             >
               <div className="bg-white dark:bg-normalBlack p-5 md:p-10 relative before:absolute before:w-[85%]  before:h-[10px] before:bg-khaki before:mx-auto before:-top-[10px] before:left-0 before:right-0 after:absolute after:w-[85%] after:h-[10px] after:bg-khaki after:mx-auto after:-bottom-[10px] after:left-0 after:right-0 hidden sm:block">
                 {/* quote icon */}
-                <img
-                  src="/images/home-1/testi-quote.png"
+              <img
+                  src="/images/home/round.png"
                   alt=""
-                  className="absolute  right-3 xl:right-10 -top-8"
+                  className="absolute  right-3 xl:right-10 -top-8 mt-10"
                 />
 
                 {/* rating icon */}
-                <ul className="flex items-center text-khaki space-x-[4px]">
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                </ul>
-                <p className="font-Lora text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                  “Professionally repurpose flexible testing procedures via
+               
+                <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
+                  "Professionally repurpose flexible testing procedures via
                   molla in customer service. Dynamically reconceptualize
                   value-added the systems before manufactured products.
-                  Enthusiastically envisioneer emerging best”
+                  Enthusiastically envisioneer emerging best"
                 </p>
                 <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
 
                 <div className="flex items-center space-x-6 ">
                   <img
-                    src="/images/home-1/call-do-action-img.png"
+                     src="/images/home/boy.jpg"
                     className="w-[65px] h-[65px]"
                     alt=""
                   />
 
                   <div className="">
-                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold font-Garamond">
+                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
                       John D. Alexon
                     </h4>
                     <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
@@ -255,46 +203,30 @@ const Testimonial = () => {
               <div className="bg-white dark:bg-normalBlack p-5 md:p-10 relative before:absolute before:w-[85%]  before:h-[10px] before:bg-khaki before:mx-auto before:-top-[10px] before:left-0 before:right-0 after:absolute after:w-[85%] after:h-[10px] after:bg-khaki after:mx-auto after:-bottom-[10px] after:left-0 after:right-0 hidden sm:block">
                 {/* quote icon */}
                 <img
-                  src="/images/home-1/testi-quote.png"
+                  src="/images/home/round.png"
                   alt=""
-                  className="absolute  right-3 xl:right-10 -top-8"
+                  className="absolute  right-3 xl:right-10 -top-8 mt-10"
                 />
 
                 {/* rating icon */}
-                <ul className="flex items-center text-khaki space-x-[4px]">
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                  <li>
-                    <FaStar size={"16px"} />
-                  </li>
-                </ul>
-                <p className="font-Lora text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                  “Professionally repurpose flexible testing procedures via
+               
+                <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
+                  "Professionally repurpose flexible testing procedures via
                   molla in customer service. Dynamically reconceptualize
                   value-added the systems before manufactured products.
-                  Enthusiastically envisioneer emerging best”
+                  Enthusiastically envisioneer emerging best"
                 </p>
                 <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
 
                 <div className="flex items-center space-x-6 ">
                   <img
-                    src="/images/home-1/testi-author.png"
+                     src="/images/home/boy.jpg"
                     className="w-[65px] h-[65px]"
                     alt=""
                   />
 
                   <div className="">
-                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold font-Garamond">
+                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
                       Brandon Mack
                     </h4>
                     <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
