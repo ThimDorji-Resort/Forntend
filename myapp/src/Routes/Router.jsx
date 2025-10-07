@@ -5,7 +5,7 @@ import ErrorPage from "../Shared/ErrorPage/ErrorPage.jsx";
 import Rooms from "../Components/Rooms/Rooms.jsx";
 import Offers from "../Components/Offers/Offers.jsx";
 import Facilities from "../Components/Facilities/Facilities.jsx";
-
+import About from "../Pages/InnerPage/About.jsx";
 //inner pages
 import Room from "../Pages/InnerPage/Room";
 
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/room",
         element: <Room />,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },

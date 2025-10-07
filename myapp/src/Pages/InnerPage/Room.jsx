@@ -1,4 +1,4 @@
-import { FaStar } from "react-icons/fa";
+
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
