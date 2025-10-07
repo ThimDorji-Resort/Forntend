@@ -8,6 +8,7 @@ import Facilities from "../Components/Facilities/Facilities.jsx";
 import About from "../Pages/InnerPage/About.jsx";
 //inner pages
 import Room from "../Pages/InnerPage/Room";
+import Services from "../Pages/InnerPage/Services.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+       {
+        path: "/services",
+        element: <Services />,
       },
     ],
   },
