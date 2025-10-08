@@ -25,7 +25,7 @@ const Services = () => {
                 SERVICES
               </h5>
               <h1 className="text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px] leading-[38px] lg:leading-[44px] font-semibold">
-                ENJOY COMPLETE & BEST QUALITY FACILITIES
+                ENJOY  BEST QUALITY FACILITIES
               </h1>
             </div>
 
