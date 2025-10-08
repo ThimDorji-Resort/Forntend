@@ -10,7 +10,7 @@ export default {
         lightBlack: " #1e1e1e",
         slateGray: "",
         gray: "#006600",
-        lightGray: "#ace532ff",
+        lightGray: "#b8b8b7ff",
         khaki: "#006600",
         whiteSmoke: "#006600",
         green : "#006600"
