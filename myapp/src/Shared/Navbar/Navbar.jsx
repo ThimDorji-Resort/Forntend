@@ -86,12 +86,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Desktop actions */}
-          <div className="hidden lg:flex items-center pr-4">
-            <Link to="/find_room">
-              <button className="btn-secondary">Booking Online</button>
-            </Link>
-          </div>
+          
         </div>
       </div>
     </nav>
