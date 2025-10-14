@@ -1,14 +1,10 @@
-// HeroSection.jsx
 import { BiPhoneCall } from "react-icons/bi";
-import banner from "../../../public/images/home/banner.png"
-
-
 
 const HeroSection = () => {
   return (
-     <div
+    <div
       className="w-full h-[700px] md:h-[800px] xl:h-[850px] 3xl:h-[950px] bg-cover bg-center text-white relative pb-[150px] lg:pb-16 xl:pb-0 grid items-center justify-center"
-      style={{ backgroundImage: `url(${banner})` }}
+      style={{ backgroundImage: `url(/images/home/banner.png)` }} // ✅ Use public URL directly
       data-aos="fade-down"
     >
       <div className="2xl:w-[720px] text-center font-inter">
@@ -18,7 +14,7 @@ const HeroSection = () => {
         <div className="mb-7 md:mb-8 lg:mb-9 xl:mb-10">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold
                          leading-[40px] md:leading-[50px] 3xl:leading-[70px]">
-           RIVERSIDE SERENITY,
+            RIVERSIDE SERENITY,
           </h1>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 3xl:text-6xl font-semibold
                          leading-[40px] lg:leading-[50px] 2xl:leading-[60px]">

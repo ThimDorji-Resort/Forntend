@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 const HelmetChanger = ({ title }) => {
   return (
     <Helmet>
-      <title>Royella - {title}</title>
+      <title>Resort Thim Dorji</title>
     </Helmet>
   );
 };

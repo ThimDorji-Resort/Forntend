@@ -8,11 +8,11 @@ import "./RoomsDatepicker.css"; // custom calendar CSS
 import { AiOutlineEye } from "react-icons/ai";
 import FsLightbox from "fslightbox-react";
 
-// Import images
-import room1 from "/images/home/room1.jpeg";
-import room2 from "/images/home/room1.jpeg";
-import room3 from "/images/home/room2.jpeg";
-import room4 from "/images/home/room2.jpeg";
+// Images (public folder URLs)
+const room1 = "/images/home/room1.jpeg";
+const room2 = "/images/home/room1.jpeg";
+const room3 = "/images/home/room2.jpeg";
+const room4 = "/images/home/room2.jpeg";
 
 const Rooms = () => {
   const [open, setOpen] = useState(false);
@@ -32,7 +32,6 @@ const Rooms = () => {
   // Lightbox
   const [toggler, setToggler] = useState(false);
 
-  // Lightbox sources array using imported images
   const lightboxSources = [room1, room2, room3, room4];
 
   useEffect(() => {
@@ -278,11 +277,7 @@ const Rooms = () => {
                 inline
                 monthsShown={1}
                 calendarClassName="rdp-pill"
-                renderCustomHeader={({
-                  date,
-                  decreaseMonth,
-                  increaseMonth,
-                }) => (
+                renderCustomHeader={({ date, decreaseMonth, increaseMonth }) => (
                   <div className="rdp-pill__header">
                     <div className="rdp-pill__title">
                       {date.toLocaleDateString(undefined, {
@@ -329,28 +324,22 @@ const Rooms = () => {
       )}
       {/* ======= /DESKTOP OVERLAY CALENDAR ======= */}
 
-      {/* ======= Two-panel background section (attached, no black edges) ======= */}
+      {/* ======= Two-panel background section ======= */}
       <section
         className="relative w-full min-h-[758px] overflow-hidden -mt-48 lg:-mt-36"
         aria-label="Rooms & Suites two-panel background"
-        style={{ zIndex: 0 }}
       >
-        {/* BACKGROUND PANELS */}
-        <div className="absolute inset-0" style={{ zIndex: 0 }}>
-          {/* No outer padding, no gap around edges, panels attached */}
+        <div className="absolute inset-0">
           <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
             {/* LEFT PANEL */}
             <div
               className="relative group overflow-hidden"
               data-aos="fade-up"
               data-aos-duration="1000"
-              style={{ zIndex: 0 }}
             >
               <div
                 className="absolute inset-0 bg-center bg-cover transition-all duration-300 group-hover:grayscale"
-                style={{
-                  backgroundImage: `url(${room1})`,
-                }}
+                style={{ backgroundImage: `url(${room1})` }}
               />
               {/* hover slide-up block */}
               <div className="absolute left-0 right-0 bottom-0 m-6">
@@ -378,15 +367,11 @@ const Rooms = () => {
               className="relative group overflow-hidden"
               data-aos="fade-up"
               data-aos-duration="1000"
-              style={{ zIndex: 0 }}
             >
               <div
                 className="absolute inset-0 bg-center bg-cover transition-all duration-300 group-hover:grayscale"
-                style={{
-                  backgroundImage: "url('/images/home/room2.jpeg')",
-                }}
+                style={{ backgroundImage: `url(${room2})` }}
               />
-              {/* hover slide-up block */}
               <div className="absolute left-0 right-0 bottom-0 m-6">
                 <div className="text-center translate-y-[200px] group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                   <span
@@ -406,29 +391,21 @@ const Rooms = () => {
                 </div>
               </div>
             </div>
-            {/* /RIGHT PANEL */}
           </div>
         </div>
 
-        {/* FOREGROUND TITLE (doesn't block hover) */}
-        <div
-  className="relative z-10 pointer-events-none"
-  style={{ zIndex: 1 }}
->
-  <div className="flex items-start justify-center pt-8 lg:pt-10 mt-32"> {/* Added mt-20 */}
-    <h1 className="pointer-events-auto text-white drop-shadow text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px] leading-7 sm:leading-8 md:leading-9 lg:leading-[42px] 2xl:leading-[52px] font-semibold uppercase">
-      Rooms & Suites
-    </h1>
-  </div>
-</div>
+        {/* FOREGROUND TITLE */}
+        <div className="relative z-10 pointer-events-none">
+          <div className="flex items-start justify-center pt-8 lg:pt-10 mt-32">
+            <h1 className="pointer-events-auto text-white drop-shadow text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px] leading-7 sm:leading-8 md:leading-9 lg:leading-[42px] 2xl:leading-[52px] font-semibold uppercase">
+              Rooms & Suites
+            </h1>
+          </div>
+        </div>
 
         {/* Lightbox */}
-        <FsLightbox
-          toggler={toggler}
-          sources={lightboxSources}
-        />
+        <FsLightbox toggler={toggler} sources={lightboxSources} />
       </section>
-      {/* ======= /Two-panel background section ======= */}
     </div>
   );
 };

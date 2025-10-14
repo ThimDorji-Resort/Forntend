@@ -120,7 +120,7 @@ const Room = () => {
                   <span className="mx-2">|</span>
                   <span>Nu 8200</span>
                 </div>
-                <Link to={"/room_details"}>
+                <Link to={"/room_details2"}>
                   <button className="flex items-center justify-center text-[15px] leading-[38px] bg-black bg-opacity-90 hover:bg-opacity-100 absolute bottom-0 -left-40 px-6 py-1 text-white group-hover:left-0 transition-all duration-500 z-10">
                     View Details{" "}
                     <BsArrowRight className="w-4 h-4 ml-2 text-white transition-transform duration-300 group-hover:translate-x-1" />{" "}
