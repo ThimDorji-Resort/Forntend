@@ -6,7 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 const Room = () => {
   return (
     <section className="font-inter">
-      <BreadCrumb title="ROOMS & SUITS" home={"/"} />
+      <BreadCrumb title="ROOMS & SUITES" home={"/"} />
 
       {/* All rooms */}
       <div
