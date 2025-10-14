@@ -13,7 +13,7 @@ const Footer3 = () => {
       <div className="Container">
         <div className="grid items-center justify-center py-20 2xl:py-[110px]">
           <div className="flex justify-center items-center">
-            <div className="bg-white p-4 rounded-lg">
+            <div className="bg-white p-4 ">
               {/* ✅ Use public URL directly */}
               <img src="/images/home/logologo.png" className="w-32" alt="logo" />
             </div>
@@ -72,21 +72,7 @@ const Footer3 = () => {
             </span>{" "}
             All Rights Reserved.
           </p>
-          <div>
-            <ul className="flex space-x-3">
-              <li className="hover:scale-100 group transition-all duration-300 w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] grid items-center justify-center rounded-full border border-[#353535] cursor-pointer">
-                <Link to="https://facebook.com/thim.dorji" className="">
-                  <FaFacebookF className="text-white group-hover:text-[#006600]" />
-                </Link>
-              </li>
 
-              <li className="group transition-all duration-300 w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] grid items-center justify-center rounded-full border border-[#353535] cursor-pointer">
-                <Link to="https://wa.me/97517755898" target="_blank" rel="noopener noreferrer">
-                  <FaWhatsapp className="text-white group-hover:text-[#006600]" />
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </footer>

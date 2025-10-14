@@ -86,10 +86,10 @@ const RoomDetails2 = () => {
     if (isAvailable) {
       Swal.fire({
                                     html: `
-    <p style="color:#d3ffd3; font-size:16px;">Proceed to booking?</p>
+    <p style="color:#d3ffd3; font-size:16px;">Do you want to proceed to booking details?</p>
   `,
 
-        title: "Room Available",
+        title: "Room is available!",
         icon: "success",
         showCancelButton: true,
         confirmButtonText: "Yes",
@@ -349,7 +349,7 @@ Hairdryer                    </span>
                   className="bg-[#006600] w-full h-10 2xl:h-[50px] text-white font-Arial font-semibold px-5 hover:animBg"
                   onClick={() => setShowAvailability(true)}
                 >
-                  Check Availability
+                  Book This Room
                 </button>
               </div>
             </div>

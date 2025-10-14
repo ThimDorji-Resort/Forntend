@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
+import FsLightbox from "fslightbox-react";
 
 const Team = () => {
   const galleryImages = [
@@ -11,14 +12,14 @@ const Team = () => {
     { src: "/images/inner/six.jpeg", name: "Lobby" },
     { src: "/images/inner/seven.jpeg", name: "Restaurant" },
     { src: "/images/inner/eight.jpeg", name: "Twin D" },
-    { src: "/images/inner/nine.jpeg", name: "Twin D" },
-    { src: "/images/inner/ten.jpeg", name: "Entrance" },
+    { src: "/images/inner/nine.jpeg", name: "Twin Bed" },
+    { src: "/images/inner/ten.jpeg", name: "Bathroom" },
     { src: "/images/inner/eleven.jpeg", name: "Corridor" },
     { src: "/images/inner/twelve.jpeg", name: "Buffet" },
     { src: "/images/inner/thirteen.jpeg", name: "Plaza 2" },
-    { src: "/images/inner/fourteen.jpeg", name: "Room" },
+    { src: "/images/inner/fourteen.jpeg", name: "Lobby" },
     { src: "/images/inner/fifteen.jpeg", name: "Parking" },
-    { src: "/images/inner/sixteen.jpeg", name: "Restaurant" },
+    { src: "/images/inner/sixteen.jpeg", name: "Plaza" },
   ];
 
   const rows = [
@@ -26,24 +27,18 @@ const Team = () => {
     galleryImages.slice(8, 16),
   ];
 
-  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
-
-  const openModal = (index) => setSelectedImageIndex(index);
-  const closeModal = () => setSelectedImageIndex(null);
-  const prevImage = () =>
-    setSelectedImageIndex(
-      selectedImageIndex === 0 ? galleryImages.length - 1 : selectedImageIndex - 1
-    );
-  const nextImage = () =>
-    setSelectedImageIndex(
-      selectedImageIndex === galleryImages.length - 1 ? 0 : selectedImageIndex + 1
-    );
+  // FsLightbox toggler and slide index
+  const [toggler, setToggler] = useState(false);
+  const [slide, setSlide] = useState(1);
 
   // Helper to render each image with hover effect
   const ImageItem = ({ img, idx, className }) => (
     <div
       className={`relative group cursor-pointer ${className}`}
-      onClick={() => openModal(idx)}
+      onClick={() => {
+        setSlide(idx + 1); // FsLightbox uses 1-based indexing
+        setToggler(!toggler);
+      }}
     >
       <img
         src={img.src}
@@ -62,13 +57,10 @@ const Team = () => {
 
       <div className="dark:bg-normalBlack py-6 mb-14 2xl:py-[120px]">
         <div className="Container">
-
-
           {/* Desktop Layout */}
           <div className="hidden lg:grid lg:grid-rows-2 lg:gap-[30px] mt-[60px]">
             {rows.map((row, rowIndex) => (
               <div key={rowIndex} className="grid grid-cols-3 gap-[30px]">
-                {/* Left Column */}
                 <div className="flex flex-col space-y-5 h-full">
                   {row.slice(0, 3).map((img, idx) => (
                     <ImageItem
@@ -80,7 +72,6 @@ const Team = () => {
                   ))}
                 </div>
 
-                {/* Middle Column (Taller) */}
                 <div className="flex flex-col space-y-5 h-full">
                   {row.slice(3, 5).map((img, idx) => (
                     <ImageItem
@@ -92,7 +83,6 @@ const Team = () => {
                   ))}
                 </div>
 
-                {/* Right Column */}
                 <div className="flex flex-col space-y-5 h-full">
                   {row.slice(5, 8).map((img, idx) => (
                     <ImageItem
@@ -152,37 +142,12 @@ const Team = () => {
             ))}
           </div>
 
-          {/* Modal / Lightbox */}
-          {selectedImageIndex !== null && (
-            <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-5">
-              <button
-                onClick={closeModal}
-                className="absolute top-5 right-10 text-white text-4xl font-bold"
-              >
-                &times;
-              </button>
-
-              <button
-                onClick={prevImage}
-                className="absolute left-10 text-white text-4xl font-regular"
-              >
-                &#10094;
-              </button>
-
-              <img
-                src={galleryImages[selectedImageIndex].src}
-                alt={galleryImages[selectedImageIndex].name}
-                className="max-h-[90%] max-w-[90%] object-contain "
-              />
-
-              <button
-                onClick={nextImage}
-                className="absolute right-10 text-white text-4xl font-regular"
-              >
-                &#10095;
-              </button>
-            </div>
-          )}
+          {/* FsLightbox */}
+          <FsLightbox
+            toggler={toggler}
+            sources={galleryImages.map((img) => img.src)}
+            slide={slide}
+          />
         </div>
       </div>
     </div>

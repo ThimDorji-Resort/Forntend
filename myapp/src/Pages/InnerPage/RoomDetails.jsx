@@ -38,9 +38,9 @@ const RoomDetails = () => {
   const setAlert = () => {
     Swal.fire({
                             html: `
-    <p style="color:#d3ffd3; font-size:16px;">Proceed to booking details?</p>
+    <p style="color:#d3ffd3; font-size:16px;">Do you want to proceed to booking details?</p>
   `,
-      title: "Confirm booking.",
+      title: "Room is available!",
       icon: "question",
       showCancelButton: true,
       confirmButtonColor: "#008000",
@@ -221,7 +221,7 @@ const RoomDetails = () => {
       onClick={setAlert}
       className="bg-[#006600] w-full h-11 text-white font-Arial font-semibold rounded-sm hover:bg-green-700 transition"
     >
-      Confirm Booking
+      Proceed to Booking
     </button>
   </div>
 </div>

@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HelmetChanger from "../Shared/Helmet/Helmet";
+import FloatingSocials from "../Shared/FloatingSocials";
 
 const Main = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Main = () => {
       <HelmetChanger title="Hotel Booking" />
       <ScrollToTop />
       <GoToTop />
+      <FloatingSocials />  {/* <-- add here */}
       <Navbar />
       <div>
         <Outlet />

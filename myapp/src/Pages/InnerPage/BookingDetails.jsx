@@ -42,7 +42,7 @@ const BookingDetails = () => {
       showCancelButton: true,
       confirmButtonColor: "#008000",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, confirm",
+      confirmButtonText: "Yes",
       cancelButtonText: "Cancel",
       background: "#006600",
       color: "#fff",

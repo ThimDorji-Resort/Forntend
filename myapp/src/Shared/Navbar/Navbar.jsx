@@ -11,7 +11,7 @@ const Navbar = () => {
   const toggleNavbar = () => setIsOpen((p) => !p);
 
   // Background on scroll; text stays black always
-  const wrapperBg = scrolled ? "bg-white shadow-md" : "bg-transparent";
+  const wrapperBg = scrolled ? "bg-white shadow-md" : "bg-white shadow-md";
   const linkColor = "text-black";
 
   const links = [

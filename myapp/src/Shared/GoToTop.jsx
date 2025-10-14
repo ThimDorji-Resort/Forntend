@@ -5,31 +5,24 @@ import { FaArrowUp } from "react-icons/fa";
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const goToBtn = () => {
+  const goToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
-  const listenToScroll = () => {
-    let heightToHidden = 20;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll > heightToHidden) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+  const handleScroll = () => {
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    setIsVisible(scrollTop > 20);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-    return () => window.removeEventListener("scroll", listenToScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <Wrapper>
       {isVisible && (
-        <div className="top-btn" onClick={goToBtn}>
+        <div className="top-btn" onClick={goToTop}>
           <FaArrowUp className="top-btn--icon" />
         </div>
       )}
@@ -37,12 +30,7 @@ const GoToTop = () => {
   );
 };
 
-const Wrapper = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
+const Wrapper = styled.div`
   .top-btn {
     font-size: 1.2rem;
     width: 3rem;
@@ -50,50 +38,47 @@ const Wrapper = styled.section`
     color: #006600;
     background-color: transparent;
     border: 3px dotted #006600;
-    box-shadow: ;
     border-radius: 50%;
     position: fixed;
-    bottom: 3rem;
-    right: 5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.3s ease;
 
     &--icon {
-      animation: gototop 1.2s linear infinite alternate-reverse;
+      animation: float 1.2s ease-in-out infinite alternate-reverse;
     }
 
-    @keyframes gototop {
-      0% {
-        transform: translateY(-0.5rem);
-      }
-      100% {
-        transform: translateY(0.8rem);
-      }
+    &:hover {
+      color: #fff;
+      background-color: #006600;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0.8rem);
     }
   }
 
   @media (max-width: 768px) {
     .top-btn {
-      right: 0;
-      left: 85%;
+      right: 1rem;
     }
   }
-  @media (max-width: 320px) {
+
+  @media (max-width: 480px) {
     .top-btn {
-      right: 0;
-      left: 80%;
+      right: 1rem;
+      bottom: 1.5rem;
     }
-  }
-  .top-btn:hover {
-    color: #fff;
-    background-color: #006600;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-    transition-duration: 300ms;
   }
 `;
 
