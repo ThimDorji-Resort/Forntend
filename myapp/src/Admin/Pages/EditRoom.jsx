@@ -105,8 +105,7 @@ const EditRoom = () => {
 
   return (
     <section className="py-0 bg-white text-black font-inter">
-      <div className="Container grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-        <div className="col-span-1 md:col-span-2">
+ <div className="max-w-6xl mx-auto">        <div className="col-span-1 md:col-span-2">
           <form onSubmit={handleUpdate}>
             <h2 className="text-4xl font-semibold py-5">Edit Room Details</h2>
 

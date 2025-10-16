@@ -17,6 +17,7 @@ import AdminRooms from "../Admin/Pages/AdminRooms.jsx";
 import AddRoom from "../Admin/Pages/AddRoom.jsx";
 import RoomDisplay from "../Admin/Pages/RoomDisplay.jsx";
 import EditRoom from "../Admin/Pages/EditRoom.jsx";
+import AdminProfile from "../Admin/Pages/AdminProfile.jsx"; // <-- already imported
 
 const router = createBrowserRouter([
   {
@@ -24,27 +25,29 @@ const router = createBrowserRouter([
     element: <Main />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Home1 /> }, // homepage
-      { path: "rooms", element: <Rooms /> }, // /rooms
-      { path: "offers", element: <Offers /> }, // /offers
-      { path: "facilities", element: <Facilities /> }, // /facilities
-      { path: "room", element: <Room /> }, // /room
-      { path: "about", element: <About /> }, // /about
-      { path: "services", element: <Services /> }, // /services
-      { path: "service_details", element: <ServiceDetails /> }, // /service_details
+      { index: true, element: <Home1 /> },
+      { path: "rooms", element: <Rooms /> },
+      { path: "offers", element: <Offers /> },
+      { path: "facilities", element: <Facilities /> },
+      { path: "room", element: <Room /> },
+      { path: "about", element: <About /> },
+      { path: "services", element: <Services /> },
+      { path: "service_details", element: <ServiceDetails /> },
     ],
   },
-  // Admin routes
   {
     path: "/admin",
     element: <AdminLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <AdminRooms /> }, // /admin
-      { path: "rooms", element: <AdminRooms /> }, // /admin/rooms
-      { path: "add-room", element: <AddRoom /> }, // /admin/add-room
-      { path: "room-display/:roomId", element: <RoomDisplay /> }, // /admin/room-display/:roomId
-      { path: "edit-room/:roomId", element: <EditRoom /> }, // /admin/edit-room/:roomId
+      { index: true, element: <AdminRooms /> },
+      { path: "rooms", element: <AdminRooms /> },
+      { path: "add-room", element: <AddRoom /> },
+      { path: "room-display/:roomId", element: <RoomDisplay /> },
+      { path: "edit-room/:roomId", element: <EditRoom /> },
+      { path: "profile", element: <AdminProfile /> }, // <-- NEW: /admin/profile
+      // remove this if it was accidental:
+      // { path: "adminmId", element: <EditRoom /> },
     ],
   },
 ]);

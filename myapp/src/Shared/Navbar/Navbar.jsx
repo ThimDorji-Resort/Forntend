@@ -3,18 +3,15 @@ import useScrollPosition from "./useScrollPosition";
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
-import logo from "../../../public/images/home/logologo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const scrollPosition = useScrollPosition();
   const scrolled = scrollPosition > 10;
-
   const toggleNavbar = () => setIsOpen((p) => !p);
 
   // Background on scroll; text stays black always
-  const wrapperBg = scrolled ? "bg-white shadow-md" : "bg-transparent";
+  const wrapperBg = scrolled ? "bg-white shadow-md" : "bg-white shadow-md";
   const linkColor = "text-black";
 
   const links = [
@@ -35,7 +32,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="w-48 lg:w-52 lg:p-4">
             <Link to="/">
-              <img src={logo} alt="website_logo" className="hidden lg:block w-full" />
+              <img
+                src="/images/home/logologo.png"
+                alt="website_logo"
+                className="hidden lg:block w-full"
+              />
             </Link>
           </div>
 
@@ -43,7 +44,11 @@ const Navbar = () => {
           <div className="px-3 w-full lg:hidden flex justify-between items-center h-[70px]">
             <div className="w-28">
               <Link to="/">
-                <img src={logo} alt="website_logo" className="hidden lg:block w-full" />
+                <img
+                  src="/images/home/logologo.png"
+                  alt="website_logo"
+                  className="w-full"
+                />
               </Link>
             </div>
 
@@ -85,8 +90,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
-          
         </div>
       </div>
     </nav>

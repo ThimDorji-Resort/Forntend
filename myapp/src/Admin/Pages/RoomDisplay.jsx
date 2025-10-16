@@ -78,8 +78,8 @@ const RoomDisplay = () => {
   return (
     <section>
       <div className="py-0 2xl:py-[32px] bg-white text-black">
-        <div className="Container grid grid-cols-6 md:grid-cols-7 lg:grid-cols-6 gap-5">
-          {/* Left Column: Images & Details */}
+<div className="max-w-8xl mx-auto ml-8 grid grid-cols-6 md:grid-cols-7 lg:grid-cols-6 gap-5">
+
           <div className="col-span-6 md:col-span-4">
             {/* Image slider */}
             <div className="overflow-hidden relative group">

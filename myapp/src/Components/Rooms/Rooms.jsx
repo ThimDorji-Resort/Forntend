@@ -416,9 +416,18 @@ const Rooms = () => {
   style={{ zIndex: 1 }}
 >
   <div className="flex items-start justify-center pt-8 lg:pt-10 mt-32"> {/* Added mt-20 */}
-    <h1 className="pointer-events-auto text-white drop-shadow text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px] leading-7 sm:leading-8 md:leading-9 lg:leading-[42px] 2xl:leading-[52px] font-semibold uppercase">
-      Rooms & Suites
-    </h1>
+   <h1
+  className="pointer-events-auto text-white drop-shadow text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px]
+             leading-7 sm:leading-8 md:leading-9 lg:leading-[42px] 2xl:leading-[52px]
+             font-semibold uppercase text-center"
+  style={{
+    textShadow:
+      "0 3px 8px rgba(0,0,0,0.75), 0 6px 16px rgba(0,0,0,0.45)",
+  }}
+>
+  Rooms & Suites
+</h1>
+
   </div>
 </div>
 
