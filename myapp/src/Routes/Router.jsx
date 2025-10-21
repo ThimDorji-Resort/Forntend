@@ -17,7 +17,10 @@ import AdminRooms from "../Admin/Pages/AdminRooms.jsx";
 import AddRoom from "../Admin/Pages/AddRoom.jsx";
 import RoomDisplay from "../Admin/Pages/RoomDisplay.jsx";
 import EditRoom from "../Admin/Pages/EditRoom.jsx";
-import AdminProfile from "../Admin/Pages/AdminProfile.jsx"; // <-- already imported
+import AdminProfile from "../Admin/Pages/AdminProfile.jsx"; 
+import AdminFacilities from "../Admin/Pages/AdminFacilities.jsx";
+import AddFacility from "../Admin/Pages/AddFacility.jsx";
+import EditFacility from "../Admin/Pages/EditFacility.jsx";
 
 const router = createBrowserRouter([
   {
@@ -46,8 +49,10 @@ const router = createBrowserRouter([
       { path: "room-display/:roomId", element: <RoomDisplay /> },
       { path: "edit-room/:roomId", element: <EditRoom /> },
       { path: "profile", element: <AdminProfile /> }, // <-- NEW: /admin/profile
-      // remove this if it was accidental:
-      // { path: "adminmId", element: <EditRoom /> },
+      { path: "facilities", element: <AdminFacilities /> },
+       { path: "facilities/new", element: <AddFacility /> },
+       { path: "facilities/edit/:id", element: <EditFacility /> },
+
     ],
   },
 ]);
