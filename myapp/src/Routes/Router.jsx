@@ -17,10 +17,13 @@ import AdminRooms from "../Admin/Pages/AdminRooms.jsx";
 import AddRoom from "../Admin/Pages/AddRoom.jsx";
 import RoomDisplay from "../Admin/Pages/RoomDisplay.jsx";
 import EditRoom from "../Admin/Pages/EditRoom.jsx";
-import AdminProfile from "../Admin/Pages/AdminProfile.jsx"; 
+import AdminProfile from "../Admin/Pages/AdminProfile.jsx";
 import AdminFacilities from "../Admin/Pages/AdminFacilities.jsx";
 import AddFacility from "../Admin/Pages/AddFacility.jsx";
 import EditFacility from "../Admin/Pages/EditFacility.jsx";
+import AdminTestimonials from "../Admin/Pages/AdminTestimonials.jsx";
+import AddTestimonial from "../Admin/Pages/AddTestimonial.jsx";
+import EditTestimonial from "../Admin/Pages/EditTestimonial.jsx";
 
 const router = createBrowserRouter([
   {
@@ -50,9 +53,11 @@ const router = createBrowserRouter([
       { path: "edit-room/:roomId", element: <EditRoom /> },
       { path: "profile", element: <AdminProfile /> }, // <-- NEW: /admin/profile
       { path: "facilities", element: <AdminFacilities /> },
-       { path: "facilities/new", element: <AddFacility /> },
-       { path: "facilities/edit/:id", element: <EditFacility /> },
-
+      { path: "facilities/new", element: <AddFacility /> },
+      { path: "facilities/edit/:id", element: <EditFacility /> },
+      { path: "testimonials", element: <AdminTestimonials /> },
+      { path: "testimonials/new", element: <AddTestimonial /> },
+      { path: "testimonials/edit/:id", element: <EditTestimonial /> },
     ],
   },
 ]);
