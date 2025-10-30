@@ -75,7 +75,7 @@ const AdminFacilities = () => {
         <div className="flex items-center gap-3">
           <h1 className="text-2xl font-semibold tracking-tight">Facilities</h1>
           <span className="text-xs md:text-sm px-2 py-1 rounded-full bg-gray-100">
-            ALL
+          
           </span>
         </div>
 
@@ -111,7 +111,7 @@ const AdminFacilities = () => {
             className="text-white uppercase tracking-wide"
           >
             <tr>
-              <th className="py-3 pl-5 pr-3 text-left font-medium">Category</th>
+             
               <th className="py-3 px-3 text-left font-medium">Title</th>
               <th className="py-3 px-3 text-left font-medium">Description</th>
               <th className="py-3 px-5 text-right font-medium">Actions</th>
@@ -136,9 +136,7 @@ const AdminFacilities = () => {
                   i % 2 === 0 ? "bg-gray-50" : "bg-white"
                 } hover:bg-[#e8f5e9] transition-colors border-t border-gray-200`}
               >
-                <td className="py-4 pl-5 pr-3 align-top font-medium text-[#006600]">
-                  {f.category}
-                </td>
+                
                 <td className="py-4 px-3 align-top font-semibold">
                   {f.title}
                 </td>

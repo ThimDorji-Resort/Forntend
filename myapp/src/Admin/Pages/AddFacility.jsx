@@ -11,7 +11,7 @@ const AddFacility = () => {
 
   const [form, setForm] = useState({
     title: "",
-    category: "",
+
     description: "",
   });
   const [errors, setErrors] = useState({});
@@ -54,7 +54,7 @@ const AddFacility = () => {
   const validate = () => {
     const next = {};
     if (!form.title.trim()) next.title = "Title is required.";
-    if (!form.category.trim()) next.category = "Category is required.";
+  
     if (!form.description.trim()) next.description = "Description is required.";
     if (images.length === 0) next.images = "Please add at least one photo.";
     setErrors(next);
@@ -129,37 +129,7 @@ const AddFacility = () => {
           )}
         </div>
 
-        {/* Category */}
-        <div className="mb-6">
-          <label className="block mb-2 text-sm font-medium text-black">
-            Category
-          </label>
-          <select
-            data-error={!!errors.category}
-            value={form.category}
-            onChange={(e) => setField("category", e.target.value)}
-            className={[
-              "w-full h-11 px-3 bg-[#f5f5f5] text-black border outline-none rounded-none",
-              errors.category
-                ? "border-red-600"
-                : "border-gray-300 focus:border-[color:var(--green)]",
-            ].join(" ")}
-            style={{ "--green": THEME_GREEN }}
-          >
-            <option value="" disabled>
-              Select category
-            </option>
-            <option value="LOFT">LOFT</option>
-            <option value="RESTAURANT">RESTAURANT</option>
-            <option value="LOUNGE">LOUNGE</option>
-            <option value="GYM">GYM</option>
-            <option value="POOL">POOL</option>
-            <option value="SPA">SPA</option>
-          </select>
-          {errors.category && (
-            <p className="mt-2 text-sm text-red-500">{errors.category}</p>
-          )}
-        </div>
+     
 
         {/* Description */}
         <div className="mb-8">
