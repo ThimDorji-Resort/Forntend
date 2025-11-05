@@ -23,8 +23,6 @@ const Footer3 = () => {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-x-[30px] 2xl:gap-x-[40px] gap-y-4">
             <div
               className="flex items-center group"
-              data-aos="fade-up"
-              data-aos-duration="1000"
             >
               <span className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] lg:w-[50px] lg:h-[50px] grid items-center justify-center">
                 <BiSolidPhoneCall className="text-white" size={15} />
@@ -35,8 +33,6 @@ const Footer3 = () => {
             </div>
             <div
               className="flex items-center group"
-              data-aos="fade-up"
-              data-aos-duration="1000"
             >
               <span className="grid items-center justify-center w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] lg:w-[50px] lg:h-[50px]">
                 <FaEnvelope className="text-white" size={15} />
@@ -47,8 +43,6 @@ const Footer3 = () => {
             </div>
             <div
               className="flex items-center group"
-              data-aos="fade-up"
-              data-aos-duration="1000"
             >
               <span className="grid items-center justify-center w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] lg:w-[50px] lg:h-[50px]">
                 <FaFileAlt className="text-white" size={15} />

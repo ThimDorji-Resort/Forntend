@@ -92,19 +92,19 @@ Sangachokor Road, Paro 12002, Bhutan
                 <div className="grid items-center grid-cols-1 gap-2 mt-8">
                   <input
                     type="text"
-                    className="w-full h-12 md:h-13 lg:h-[59px] px-4 border border-[#888] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#888] focus:border-gray dark:focus:border-lightGray focus:outline-none"
+                    className="w-full h-12 md:h-13 lg:h-[59px] px-4 border border-[#fff] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#fff] focus:border-gray dark:focus:border-lightGray focus:outline-none"
                     placeholder="Your Name"
                     required
                   />
                   <input
                     type="email"
-                    className="w-full h-12 md:h-13 lg:h-[59px] px-4 border  border-[#888] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#888] focus:border-gray dark:focus:border-lightGray focus:outline-none"
+                    className="w-full h-12 md:h-13 lg:h-[59px] px-4 border  border-[#fff] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#fff] focus:border-gray dark:focus:border-lightGray focus:outline-none"
                     placeholder="Enter E-mail"
                     required
                   />
                   <input
                     type="subject"
-                    className="w-full h-12 md:h-13 lg:h-[59px] px-4 border  border-[#888] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#888] focus:border-gray dark:focus:border-lightGray focus:outline-none"
+                    className="w-full h-12 md:h-13 lg:h-[59px] px-4 border  border-[#fff] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#fff] focus:border-gray dark:focus:border-lightGray focus:outline-none"
                     placeholder="Enter Subject"
                     required
                   />
@@ -113,7 +113,7 @@ Sangachokor Road, Paro 12002, Bhutan
                     id=""
                     cols="30"
                     rows="10"
-                    className="w-full h-[121px] px-4 border border-[#888] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#888] resize-none focus:border-gray dark:focus:border-lightGray focus:outline-none"
+                    className="w-full h-[121px] px-4 border border-[#fff] dark:border-lightGray text-gray dark:text-lightGray outline-none  bg-transparent mt-4 focus:ring-0 placeholder:text-[#fff] resize-none focus:border-gray dark:focus:border-lightGray focus:outline-none"
                     placeholder="Write Message:"
                   ></textarea>
                   <button className="w-full bg-[#006600] text-white text-center h-10 2xl:h-[55px] mt-5">

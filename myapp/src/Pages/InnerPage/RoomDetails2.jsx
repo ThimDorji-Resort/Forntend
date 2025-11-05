@@ -136,7 +136,7 @@ const RoomDetails2 = () => {
               <img
                 src={images[imageIndex]}
                 alt=""
-                className="transition-all duration-500 delay-300"
+                className="transition-all duration-500 delay-300 "
               />
               <div className="flex">
                 <span
@@ -392,11 +392,11 @@ Hairdryer                    </span>
         onChange={(e) =>
           setCheckIn(e.target.value ? new Date(e.target.value) : null)
         }
-        className="w-full border border-white px-3 py-2 rounded text-white bg-black hover:bg-green-700 appearance-none placeholder-green-200 "
+        className="w-full border border-white px-3 py-2  text-white bg-black hover:bg-green-700 appearance-none placeholder-green-200 "
       />
     ) : (
       <button
-        className="w-full text-left border border-gray-200 px-3 py-2 rounded text-white bg-black hover:bg-green-700"
+        className="w-full text-left border border-gray-200 px-3 py-2  text-white bg-black hover:bg-green-700"
         onClick={openInOverlay}
       >
         {checkIn ? fmt(checkIn) : "Select date"}
@@ -414,11 +414,11 @@ Hairdryer                    </span>
                             onChange={(e) =>
                               setCheckOut(e.target.value ? new Date(e.target.value) : null)
                             }
-                            className="w-full border border-white px-3 py-2 rounded text-white bg-black hover:bg-green-700 appearance-none placeholder-green-200 "
+                            className="w-full border border-white px-3 py-2  text-white bg-black hover:bg-green-700 appearance-none placeholder-green-200 "
                           />
                         ) : (
                           <button
-                            className="w-full text-left border border-white px-3 py-2 rounded text-white bg-black hover:bg-green-700"
+                            className="w-full text-left border border-white px-3 py-2  text-white bg-black hover:bg-green-700"
                             onClick={openOutOverlay}
                           >
                             {checkOut ? fmt(checkOut) : "Select date"}
@@ -433,7 +433,7 @@ Hairdryer                    </span>
                         Guests
                       </label>
                       <div
-                        className="w-full border border-white px-3 py-2 rounded cursor-pointer text-white dark:text-white dark:bg-normalBlack flex justify-between items-center"
+                        className="w-full border border-white px-3 py-2  cursor-pointer text-white dark:text-white dark:bg-normalBlack flex justify-between items-center"
                         onClick={() => setGuestOpen(!guestOpen)}
                       >
                         <span>
@@ -444,20 +444,20 @@ Hairdryer                    </span>
                         />
                       </div>
                       {guestOpen && (
-                        <div className="absolute top-15 left-0 bg-white dark:bg-lightBlack border rounded w-full p-3 space-y-2 shadow-lg z-50 animate-slide-down">
+                        <div className="absolute top-15 left-0 bg-white dark:bg-lightBlack border  w-full p-3 space-y-2 shadow-lg z-50 animate-slide-down">
                           <div className="flex justify-between items-center">
                             <span>Adults</span>
                             <div className="flex gap-2">
                               <button
                                 onClick={() => setAdult((v) => Math.max(1, v - 1))}
-                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded -mt-1"
+                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700  -mt-1"
                               >
                                 -
                               </button>
                               <span>{adult}</span>
                               <button
                                 onClick={() => setAdult(adult + 1)}
-                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded -mt-1"
+                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700  -mt-1"
                               >
                                 +
                               </button>
@@ -468,14 +468,14 @@ Hairdryer                    </span>
                             <div className="flex gap-2">
                               <button
                                 onClick={() => setChildren((v) => Math.max(0, v - 1))}
-                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded -mt-1"
+                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700  -mt-1"
                               >
                                 -
                               </button>
                               <span>{children}</span>
                               <button
                                 onClick={() => setChildren(children + 1)}
-                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded -mt-1"
+                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700  -mt-1"
                               >
                                 +
                               </button>
@@ -491,7 +491,7 @@ Hairdryer                    </span>
                         Rooms
                       </label>
                       <div
-                        className="w-full border border-white px-3 py-2 rounded cursor-pointer text-white dark:text-white dark:bg-normalBlack flex justify-between items-center"
+                        className="w-full border border-white px-3 py-2  cursor-pointer text-white dark:text-white dark:bg-normalBlack flex justify-between items-center"
                         onClick={() => setRoomOpen(!roomOpen)}
                       >
                         <span>{room} Room{room > 1 ? "s" : ""}</span>
@@ -500,20 +500,20 @@ Hairdryer                    </span>
                         />
                       </div>
                       {roomOpen && (
-                        <div className="absolute top-15 left-0 bg-white dark:bg-lightBlack border rounded w-full p-3 space-y-2 shadow-lg z-50 animate-slide-down">
+                        <div className="absolute top-15 left-0 bg-white dark:bg-lightBlack border  w-full p-3 space-y-2 shadow-lg z-50 animate-slide-down">
                           <div className="flex justify-between items-center">
                             <span>Rooms</span>
                             <div className="flex gap-2">
                               <button
                                 onClick={() => setRoom((v) => Math.max(1, v - 1))}
-                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded -mt-1"
+                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700  -mt-1"
                               >
                                 -
                               </button>
                               <span>{room}</span>
                               <button
                                 onClick={() => setRoom(room + 1)}
-                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded -mt-1"
+                                className="px-2 py-1 bg-gray-200 dark:bg-gray-700  -mt-1"
                               >
                                 +
                               </button>
@@ -526,7 +526,7 @@ Hairdryer                    </span>
                     {/* Confirm Button */}
                     <button
                       onClick={checkRoomAvailability}
-                      className="mt-auto bg-[#006600] text-white font-semibold py-3 rounded hover:bg-[#004d00] transition"
+                      className="mt-auto bg-[#006600] text-white font-semibold py-3  hover:bg-[#004d00] transition"
                     >
                       Check Availability
                     </button>
@@ -535,85 +535,115 @@ Hairdryer                    </span>
               </div>
             )}
 
-            {/* ======= DESKTOP OVERLAY CALENDAR ======= */}
-            {useDesktopPicker && (showInOverlay || showOutOverlay) && (
-              <div
-                className={`fixed inset-0 z-50 bg-black/20 flex items-center justify-center px-4 rdp-backdrop ${
-                  isClosing ? "is-closing" : ""
-                }`}
-                onClick={closeOverlay}
-              >
-                <div
-                  className={`bg-white text-black rounded-2xl shadow-2xl max-w-[560px] w-full overflow-hidden rdp-card ${
-                    isClosing ? "is-closing" : ""
-                  }`}
-                  onClick={(e) => e.stopPropagation()}
+        {/* ===== DESKTOP OVERLAY CALENDAR ===== */}
+        {useDesktopPicker && (showInOverlay || showOutOverlay) && (
+          <div
+            className={`fixed inset-0 z-[9999] bg-black/20 flex items-center justify-center px-4`}
+            onClick={closeOverlay}
+          >
+            <div
+              className="bg-white text-black shadow-2xl max-w-[560px] w-full overflow-visible"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+                <h3 className="text-lg font-semibold">
+                  {showInOverlay ? "Select Check-in" : "Select Check-out"}
+                </h3>
+                <button
+                  onClick={closeOverlay}
+                  className="px-3 py-1.5 border border-[#D1D5DB] hover:bg-gray-50  text-sm"
                 >
-                  {/* Header */}
-                  <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-                    <h3 className="text-lg font-semibold">
-                      {showInOverlay ? "Select Check-in" : "Select Check-out"}
-                    </h3>
-                    <button
-                      onClick={closeOverlay}
-                      className="px-3 py-1.5 border border-gray-300 hover:bg-gray-50 rounded-md text-sm"
-                    >
-                      Close
-                    </button>
-                  </div>
-
-                  {/* Calendar */}
-                  <div className="p-3 md:p-5">
-                    <ReactDatePicker
-                      inline
-                      monthsShown={1}
-                      calendarClassName="rdp-pill"
-                      renderCustomHeader={({ date, decreaseMonth, increaseMonth }) => (
-                        <div className="rdp-pill__header">
-                          <div className="rdp-pill__title">
-                            {date.toLocaleDateString(undefined, {
-                              month: "long",
-                              year: "numeric",
-                            })}
-                          </div>
-                          <div className="rdp-pill__controls">
-                            <button
-                              type="button"
-                              className="rdp-pill__btn rdp-pill__btn--up"
-                              onClick={increaseMonth}
-                            >
-                              ▲
-                            </button>
-                            <span className="rdp-pill__divider" />
-                            <button
-                              type="button"
-                              className="rdp-pill__btn rdp-pill__btn--down"
-                              onClick={decreaseMonth}
-                            >
-                              ▼
-                            </button>
-                          </div>
-                        </div>
-                      )}
-                      selected={showInOverlay ? checkIn : checkOut}
-                      minDate={showInOverlay ? new Date() : checkIn || new Date()}
-                      onChange={(date) => {
-                        if (showInOverlay) {
-                          setCheckIn(date);
-                          if (checkOut && date && checkOut < date) setCheckOut(null);
-                          closeOverlay();
-                        } else {
-                          setCheckOut(date);
-                          closeOverlay();
-                        }
-                      }}
-                      showDisabledMonthNavigation
-                    />
-                  </div>
-                </div>
+                  Close
+                </button>
               </div>
-            )}
-            {/* ======= /DESKTOP OVERLAY CALENDAR ======= */}
+              <div className="p-3 md:p-5">
+<ReactDatePicker
+  inline
+  monthsShown={1}
+  calendarClassName="rdp-pill"
+  selected={showInOverlay ? checkIn : checkOut}
+  minDate={showInOverlay ? new Date() : checkIn || new Date()}
+  onChange={(date) => {
+    if (showInOverlay) {
+      setCheckIn(date);
+      if (checkOut && date && checkOut < date) setCheckOut(null);
+      closeOverlay();
+    } else {
+      setCheckOut(date);
+      closeOverlay();
+    }
+  }}
+  showDisabledMonthNavigation
+renderCustomHeader={({
+  date,
+  changeMonth,
+  changeYear,
+  decreaseMonth,
+  increaseMonth,
+  prevMonthButtonDisabled,
+  nextMonthButtonDisabled,
+}) => (
+  <div className="flex items-center justify-between px-3 py-2">
+    {/* Left side: Month & Year */}
+    <div className="flex items-center space-x-2">
+      {/* Month Dropdown */}
+      <select
+        value={date.getMonth()}
+        onChange={({ target: { value } }) => changeMonth(Number(value))}
+        className="border px-2 py-1 text-sm border-[#9CA3AF]"
+      >
+        {Array.from({ length: 12 }).map((_, i) => (
+          <option key={i} value={i}>
+            {new Date(0, i).toLocaleString("default", { month: "long" })}
+          </option>
+        ))}
+      </select>
+
+      {/* Year Dropdown */}
+      <select
+        value={date.getFullYear()}
+        onChange={({ target: { value } }) => changeYear(Number(value))}
+        className="border px-2 py-1 text-sm border-[#9CA3AF]"
+      >
+        {Array.from({ length: 11 }, (_, i) => {
+          const year = new Date().getFullYear() + i; // current year to 10 years ahead
+          return (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+
+    {/* Right side: Month arrows in a row */}
+    <div className="flex items-center space-x-2">
+      <button
+        onClick={decreaseMonth}
+        disabled={prevMonthButtonDisabled}
+        className="px-2 py-1 border border-[#9CA3AF] text-[#1F1F1F]"
+        title="Previous Month"
+      >
+        ▲
+      </button>
+      <button
+        onClick={increaseMonth}
+        disabled={nextMonthButtonDisabled}
+        className="px-2 py-1 border border-[#9CA3AF] text-[#1F1F1F]"
+        title="Next Month"
+      >
+        ▼
+      </button>
+    </div>
+  </div>
+)}
+/>
+
+              </div>
+            </div>
+          </div>
+        )}
+        {/* ===== /DESKTOP OVERLAY CALENDAR ===== */}
           </div>
         </div>
       </div>

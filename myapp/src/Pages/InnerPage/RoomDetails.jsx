@@ -40,7 +40,7 @@ const RoomDetails = () => {
                             html: `
     <p style="color:#d3ffd3; font-size:16px;">Do you want to proceed to booking details?</p>
   `,
-      title: "Room is available!",
+      title: "Proceed to Booking",
       icon: "question",
       showCancelButton: true,
       confirmButtonColor: "#008000",
@@ -71,7 +71,7 @@ const RoomDetails = () => {
               <img
                 src={images[imageIndex]}
                 alt=""
-                className="transition-all duration-500 delay-300 w-full h-[400px] object-cover rounded"
+                className="transition-all duration-500 delay-300 w-full h-[400px] object-cover "
               />
               <span
                 className="w-[40px] h-[40px] bg-white dark:bg-lightBlack hover:bg-[#006600] dark:hover:bg-[#006600] grid items-center justify-center absolute bottom-[45%] left-[-50px] group-hover:left-4 transition-all duration-300 cursor-pointer"
@@ -147,7 +147,7 @@ const RoomDetails = () => {
       <ReactDatePicker
         selected={checkIn}
         onChange={(date) => setCheckIn(date)}
-        className="border border-gray-300 text-gray-800 bg-white rounded-sm px-3 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 w-full"
+        className="border border-gray-300 text-gray-800 bg-white -sm px-3 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 w-full"
         placeholderText="Select date"
       />
     </div>
@@ -160,7 +160,7 @@ const RoomDetails = () => {
       <ReactDatePicker
         selected={checkOut}
         onChange={(date) => setCheckOut(date)}
-        className="border border-gray-300 text-gray-800 bg-white rounded-sm px-3 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 w-full"
+        className="border border-gray-300 text-gray-800 bg-white -sm px-3 py-3 focus:outline-none focus:ring-2 focus:ring-green-600 w-full"
         placeholderText="Select date"
       />
     </div>
@@ -178,16 +178,16 @@ const RoomDetails = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => set((v) => Math.max(min, v - 1))}
-            className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+            className="px-3 py-1 bg-gray-200 dark:bg-gray-700  hover:bg-gray-300 dark:hover:bg-gray-600"
           >
             -
           </button>
-          <span className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-500 dark:border-gray-700 rounded text-gray-800 dark:text-white min-w-[40px] text-center">
+          <span className="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-500 dark:border-gray-700  text-gray-800 dark:text-white min-w-[40px] text-center">
             {value}
           </span>
           <button
             onClick={() => set(value + 1)}
-            className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded rounded-sm hover:bg-gray-300 dark:hover:bg-gray-600"
+            className="px-3 py-1 bg-gray-200 dark:bg-gray-700  -sm hover:bg-gray-300 dark:hover:bg-gray-600"
           >
             +
           </button>
@@ -219,7 +219,7 @@ const RoomDetails = () => {
   <div className="mt-6">
     <button
       onClick={setAlert}
-      className="bg-[#006600] w-full h-11 text-white font-Arial font-semibold rounded-sm hover:bg-green-700 transition"
+      className="bg-[#006600] w-full h-11 text-white font-Arial font-semibold -sm hover:bg-green-700 transition"
     >
       Proceed to Booking
     </button>
