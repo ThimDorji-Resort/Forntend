@@ -29,7 +29,7 @@ const Footer3 = () => {
               <span className="w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] lg:w-[50px] lg:h-[50px] grid items-center justify-center">
                 <BiSolidPhoneCall className="text-white" size={15} />
               </span>
-              <p className="text-sm sm:text-base leading-[26px] lg:leading-[38px] font-Arial font-small ml-2 text-white group-hover:text-[#006600] transition-all duration-300">
+              <p className="text-sm sm:text-base leading-[26px] lg:leading-[38px] font-Arial font-small ml-2 text-white transition-all duration-300">
                 +975 17755898 | +65 8111 9926
               </p>
             </div>
@@ -41,7 +41,7 @@ const Footer3 = () => {
               <span className="grid items-center justify-center w-[35px] h-[35px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] lg:w-[50px] lg:h-[50px]">
                 <FaEnvelope className="text-white" size={15} />
               </span>
-              <p className="text-sm sm:text-base leading-[26px] lg:leading-[38px] font-Arial font-small ml-2 text-white group-hover:text-[#006600] transition-all duration-300">
+              <p className="text-sm sm:text-base leading-[26px] lg:leading-[38px] font-Arial font-small ml-2 text-white transition-all duration-300">
                 resortthimdorjireservation@gmail.com
               </p>
             </div>

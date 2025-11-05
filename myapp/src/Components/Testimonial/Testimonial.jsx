@@ -1,264 +1,151 @@
-import { FaStar } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
-import "../../Components4/Testimonial/testimonials.css";
 import "keen-slider/keen-slider.min.css";
 
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [loaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
   const [sliderRef, instanceRef] = useKeenSlider({
+    slides: { perView: 1, spacing: 20 },
     breakpoints: {
-      "(min-width: 600px)": {
-        slides: { perView: 1, spacing: 20 },
-      },
-      "(min-width: 768px)": {
-        slides: { perView: 2, spacing: 20 },
+      "(min-width: 1024px)": {
+        slides: { perView: 2, spacing: 30 },
+        centered: true,
       },
     },
     loop: true,
-    initial: 0,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
     created() {
-      // setLoaded(true);
+      setLoaded(true);
     },
   });
 
+  const testimonials = [
+    {
+      name: "Marina Trange",
+      role: "Manager",
+      img: "/images/home/boy.jpg",
+      text: "“Professionally repurpose flexible testing procedures via molla in customer service. Dynamically reconceptualize value-added systems before manufactured products.”",
+    },
+    {
+      name: "John D. Alexon",
+      role: "Manager",
+      img: "/images/home/boy.jpg",
+      text: "“Enthusiastically envisioneer emerging best practices and deliver seamless experiences with personalized service and comfort.”",
+    },
+    {
+      name: "Brandon Mack",
+      role: "Manager",
+      img: "/images/home/boy.jpg",
+      text: "“Dynamically repurpose modernized platforms with hospitality-driven experiences and sustainable values.”",
+    },
+  ];
+
   return (
-    <section className="bg-[url('/images/home/background.png')] bg-[rgba(30,30,30,0.4)] dark:bg-[rgba(30,30,30,0.6)] bg-opacity-40 grid items-center justify-center bg-no-repeat bg-cover font-Inter">
+    <section className="bg-[url('/images/home/background.png')] bg-[rgba(30,30,30,0.4)] dark:bg-[rgba(30,30,30,0.6)] bg-opacity-40 grid items-center justify-center bg-no-repeat bg-cover">
       <div className="Container py-20 lg:py-[120px]">
-        {/* section title */}
+        {/* Section Header */}
         <div
-          className="text-center sm:px-8 md:px-[80px] lg:px-[120px] xl:px-[200px]  2xl:px-[335px] mx-auto px-5"
+          className="text-center sm:px-8 md:px-[80px] lg:px-[120px] xl:px-[200px] 2xl:px-[335px] mx-auto px-5"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          {/* Section logo */}
           <div className="flex items-center justify-center space-x-2 mb-4 lg:mb-5">
-            <hr className="w-[100px] h-[1px]  text-lightBlack " />
-          
-            <hr className="w-[100px] h-[1px]  text-lightBlack " />
+            <hr className="w-[150px] h-[1px] text-[#8C8C8C]" />
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-3xl 2xl:text-[38px] leading-[42px] 2xl:leading-[52px] text-lightBlack mt-[20px] mb-[16px] font-semibold uppercase">
+          <h1 className="text-xl sm:text-2xl md:text-3xl 2xl:text-[38px] leading-[42px] 2xl:leading-[52px] text-black mt-[20px] mb-[16px] font-Arial font-semibold uppercase">
             Customer's Testimonial
           </h1>
-          <p className="leading-7 lg:leading-[26px] text-lightBlack font-normal text-sm sm:text-base">
-            Hear from our guests who have experienced the comfort
-  and Bhutanese hospitality at Thim Dorji Resort. Their stories 
-  reflect the memorable stays.
+          <p className="font-Arial leading-7 lg:leading-[26px] text-black font-normal text-sm sm:text-base">
+            Hear from our guests who have experienced the comfort and Bhutanese
+            hospitality at Thim Dorji Resort. Their stories reflect the
+            memorable stays.
           </p>
         </div>
 
-        {/* very small screen Show and 567px hidden */}
-        <div
-          className="mt-14 sm:hidden px-1"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          {/* Small device show one testimonials section */}
-          <div className="py-[10px] pt-4 sm:hidden">
-            <div className="bg-white dark:bg-normalBlack p-5 md:p-10 relative before:absolute before:w-[85%]  before:h-[10px] before:bg-khaki before:mx-auto before:-top-[10px] before:left-0 before:right-0 after:absolute after:w-[85%] after:h-[10px] after:bg-khaki after:mx-auto after:-bottom-[10px] after:left-0 after:right-0 sm:hidden">
-              {/* quote icon */}
-              <img
-                src="/images/home-1/testi-quote.png"
-                alt=""
-                className="absolute  right-3 xl:right-10 -top-8"
-              />
-
-              {/* rating icon */}
-              
-              <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                "Professionally repurpose flexible testing procedures via molla
-                in customer service. Dynamically reconceptualize value-added the
-                systems before manufactured products. Enthusiastically
-                envisioneer emerging best"
+        {/* Small Screen Static Testimonial */}
+        <div className="mt-14 sm:hidden px-2">
+          <div className="py-[10px]">
+            <div className="w-[85%] h-[10px] bg-[#006600] mx-auto"></div>
+            <div className="bg-white dark:bg-normalBlack p-6 shadow-md relative">
+              <p className="font-Arial text-sm leading-[26px] text-black dark:text-lightGray font-normal italic mb-[20px]">
+                {testimonials[0].text}
               </p>
-              <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
-
-              <div className="flex items-center space-x-6 ">
+              <div className="flex items-center space-x-4">
                 <img
-                  src="/images/home-1/testi-author.png"
-                  className="w-[65px] h-[65px]"
-                  alt=""
+                  src={testimonials[0].img}
+                  className="w-[65px] h-[65px] rounded-full"
+                  alt={testimonials[0].name}
                 />
-
-                <div className="">
-                  <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
-                    Maicle clork
+                <div>
+                  <h4 className="text-base lg:text-[22px] leading-[26px] text-black dark:text-white font-semibold font-Garamond">
+                    {testimonials[0].name}
                   </h4>
-                  <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
-                    <span className="w-5 h-[1px] inline-block text-khaki bg-khaki mr-2"></span>
-                    Manger
+                  <p className="text-sm md:text-base leading-[26px] font-normal text-[#555555] dark:text-lightGray flex items-center">
+                    <span className="w-5 h-[1px] inline-block bg-[#006600] mr-2"></span>
+                    {testimonials[0].role}
                   </p>
                 </div>
               </div>
             </div>
+            <div className="w-[85%] h-[10px] bg-[#006600] mx-auto"></div>
           </div>
         </div>
 
-        {/* testimonial */}
-        <div
-          className="mt-14 2xl:mt-[60px] relative keen-slider  hidden sm:block"
-          ref={sliderRef}
-        >
-          {/* slider one */}
-          <div className="keen-slider__slide number-slide1 hidden sm:block">
-            <div
-              className="py-[10px] pt-10 hidden sm:block"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div className="bg-white dark:bg-normalBlack p-5 md:p-10 relative before:absolute before:w-[85%]  before:h-[10px] before:bg-khaki before:mx-auto before:-top-[10px] before:left-0 before:right-0 after:absolute after:w-[85%] after:h-[10px] after:bg-khaki after:mx-auto after:-bottom-[10px] after:left-0 after:right-0 hidden sm:block">
-                {/* quote icon */}
-                <img
-                  src="/images/home/round.png"
-                  alt=""
-                  className="absolute  right-3 xl:right-10 -top-8 mt-10"
-                />
-
-                {/* rating icon */}
-                
-                <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                  "Professionally repurpose flexible testing procedures via
-                  molla in customer service. Dynamically reconceptualize
-                  value-added the systems before manufactured products.
-                  Enthusiastically envisioneer emerging best"
-                </p>
-                <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
-
-                <div className="flex items-center space-x-6 ">
-                  <img
-                    src="/images/home/boy.jpg"
-                    className="w-[65px] h-[65px]"
-                    alt=""
-                  />
-
-                  <div className="">
-                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
-                      Marina Trange
-                    </h4>
-                    <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
-                      <span className="w-5 h-[1px] inline-block text-khaki bg-khaki mr-2"></span>
-                      Manger
+        {/* Slider for Medium and Large Screens */}
+        <div className="relative mt-14 hidden sm:block">
+          <div ref={sliderRef} className="keen-slider">
+            {testimonials.map((t, index) => (
+              <div key={index} className="keen-slider__slide flex justify-center">
+                <div className="w-full md:w-[90%] lg:w-[95%] flex flex-col">
+                  <div className="w-[85%] h-[10px] bg-[#006600] mx-auto"></div>
+                  <div className="bg-white dark:bg-normalBlack p-6 md:p-10 relative shadow-md flex flex-col justify-between min-h-[300px]">
+                    <p className="font-Arial text-sm sm:text-base leading-[26px] text-black dark:text-lightGray font-normal xl:text-lg mt-[10px] italic mb-[20px] flex-grow">
+                      {t.text}
                     </p>
+                    <div className="flex items-center space-x-6 mt-4">
+                      <img
+                        src={t.img}
+                        className="w-[65px] h-[65px] rounded-full"
+                        alt={t.name}
+                      />
+                      <div>
+                        <h4 className="text-base lg:text-[22px] leading-[26px] text-black dark:text-white font-semibold font-Garamond">
+                          {t.name}
+                        </h4>
+                        <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-[#555555] dark:text-lightGray flex items-center">
+                          <span className="w-5 h-[1px] inline-block bg-[#006600] mr-2"></span>
+                          {t.role}
+                        </p>
+                      </div>
+                    </div>
                   </div>
+                  <div className="w-[85%] h-[10px] bg-[#006600] mx-auto"></div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-          {/* slider two */}
-          <div className="keen-slider__slide number-slide1 hidden sm:block">
-            <div
-              className="py-[10px] pt-10 hidden sm:block"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div className="bg-white dark:bg-normalBlack p-5 md:p-10 relative before:absolute before:w-[85%]  before:h-[10px] before:bg-khaki before:mx-auto before:-top-[10px] before:left-0 before:right-0 after:absolute after:w-[85%] after:h-[10px] after:bg-khaki after:mx-auto after:-bottom-[10px] after:left-0 after:right-0 hidden sm:block">
-                {/* quote icon */}
-              <img
-                  src="/images/home/round.png"
-                  alt=""
-                  className="absolute  right-3 xl:right-10 -top-8 mt-10"
-                />
 
-                {/* rating icon */}
-               
-                <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                  "Professionally repurpose flexible testing procedures via
-                  molla in customer service. Dynamically reconceptualize
-                  value-added the systems before manufactured products.
-                  Enthusiastically envisioneer emerging best"
-                </p>
-                <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
-
-                <div className="flex items-center space-x-6 ">
-                  <img
-                     src="/images/home/boy.jpg"
-                    className="w-[65px] h-[65px]"
-                    alt=""
-                  />
-
-                  <div className="">
-                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
-                      John D. Alexon
-                    </h4>
-                    <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
-                      <span className="w-5 h-[1px] inline-block text-khaki bg-khaki mr-2"></span>
-                      Manger
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* slider three */}
-          <div className="keen-slider__slide number-slide1 hidden sm:block">
-            <div
-              className="py-[10px] pt-10 hidden sm:block"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <div className="bg-white dark:bg-normalBlack p-5 md:p-10 relative before:absolute before:w-[85%]  before:h-[10px] before:bg-khaki before:mx-auto before:-top-[10px] before:left-0 before:right-0 after:absolute after:w-[85%] after:h-[10px] after:bg-khaki after:mx-auto after:-bottom-[10px] after:left-0 after:right-0 hidden sm:block">
-                {/* quote icon */}
-                <img
-                  src="/images/home/round.png"
-                  alt=""
-                  className="absolute  right-3 xl:right-10 -top-8 mt-10"
-                />
-
-                {/* rating icon */}
-               
-                <p className="text-sm sm:text-base leading-[26px] text-gray dark:text-lightGray font-normal xl:text-lg mt-[30px] italic mb-[45px] before:absolute before:h-[30px] before:left-0 before:bottom-[-36px] before:bg-khaki before:w-[1px] relative">
-                  "Professionally repurpose flexible testing procedures via
-                  molla in customer service. Dynamically reconceptualize
-                  value-added the systems before manufactured products.
-                  Enthusiastically envisioneer emerging best"
-                </p>
-                <span className="w-[1px] h-[25px] bg-[#ddd]"></span>
-
-                <div className="flex items-center space-x-6 ">
-                  <img
-                     src="/images/home/boy.jpg"
-                    className="w-[65px] h-[65px]"
-                    alt=""
-                  />
-
-                  <div className="">
-                    <h4 className="text-base lg:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold">
-                      Brandon Mack
-                    </h4>
-                    <p className="pt-1 text-sm md:text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center">
-                      <span className="w-5 h-[1px] inline-block text-khaki bg-khaki mr-2"></span>
-                      Manger
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* slide changer */}
-        <div className="mx-auto  ">
+          {/* Arrow Buttons */}
           {loaded && instanceRef.current && (
-            <div className="dots flex items-center justify-center">
-              {[
-                ...Array(
-                  instanceRef.current.track.details.slides.length
-                ).keys(),
-              ].map((idx) => {
-                return (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      instanceRef.current?.moveToIdx(idx);
-                    }}
-                    className={"dot" + (currentSlide === idx ? " active" : "")}
-                  ></button>
-                );
-              })}
-            </div>
+            <>
+              <button
+                onClick={() => instanceRef.current.prev()}
+                className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-[#006600] text-white p-3 rounded-full shadow-md hover:bg-[#004d00] transition"
+              >
+                <FaArrowLeft />
+              </button>
+              <button
+                onClick={() => instanceRef.current.next()}
+                className="absolute -right-8 top-1/2 transform -translate-y-1/2 bg-[#006600] text-white p-3 rounded-full shadow-md hover:bg-[#004d00] transition"
+              >
+                <FaArrowRight />
+              </button>
+            </>
           )}
         </div>
       </div>

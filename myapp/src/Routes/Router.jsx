@@ -9,12 +9,14 @@ import About from "../Pages/InnerPage/About.jsx";
 //inner pages
 import Room from "../Pages/InnerPage/Room";
 import Services from "../Pages/InnerPage/Services.jsx";
+import ServiceDetails from "../Pages/InnerPage/ServiceDetails.jsx"
 import RoomDetails from "../Pages/InnerPage/RoomDetails";
 import RoomDetails2 from "../Pages/InnerPage/RoomDetails2";
 import Contact from "../Pages/InnerPage/Contact";
 import BookingDetails from "../Pages/InnerPage/BookingDetails.jsx";
 import TermsAndConditions from "../Pages/InnerPage/TermsAndConditions.jsx";
 import Gallery from "../Pages/InnerPage/Gallery.jsx";
+import AvailableRooms from "../Pages/InnerPage/AvailableRooms.jsx"
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/room",
         element: <Room />,
+      },
+      {
+        path: "/available_rooms",
+        element: <AvailableRooms />,
       },
       {
         path: "/room_details",
@@ -58,6 +64,10 @@ const router = createBrowserRouter([
        {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/service_details",
+        element: <ServiceDetails />,
       },
       {
         path: "/contact",

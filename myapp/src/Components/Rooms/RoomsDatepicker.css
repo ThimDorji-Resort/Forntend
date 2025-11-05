@@ -1,9 +1,9 @@
 :root {
-  --pill-accent: #2563eb;
-  --pill-accent-hover: #1d4ed8;
+  --pill-accent: #006600;
+  --pill-accent-hover: #006600;
   --pill-muted: #f8fafc;
   --pill-muted-text: #64748b;
-  --pill-text: #1e293b;
+  --pill-text: #002000;
   --pill-bg: #ffffff;
   --pill-border: #e2e8f0;
   --pill-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,6 @@
 /* Calendar card - WIDER */
 .rdp-card {
   animation: rdp-pop 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  border-radius: 12px;
   background: var(--pill-bg);
   box-shadow: var(--pill-shadow);
   max-width: 360px; /* Increased from 320px */
@@ -32,6 +31,11 @@
 
 .rdp-card.is-closing {
   animation: rdp-pop-out 200ms ease-out forwards;
+}
+
+/* RoomsDatepicker.css */
+.rdp-pill {
+  min-height: 365px; /* adjust based on your design */
 }
 
 /* Animations */
@@ -70,7 +74,6 @@
 /* Calendar root - WIDER AND FILLS SPACE */
 .rdp-pill.react-datepicker {
   border: none;
-  border-radius: 12px;
   padding: 12px 16px; /* More horizontal padding */
   background: var(--pill-bg);
   font-family: 'Inter', -apple-system, sans-serif;
@@ -165,7 +168,7 @@
   color: #fff;
   border-color: var(--pill-accent);
   transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 75, 69, 0.3);
 }
 
 .rdp-pill .react-datepicker__day--outside-month {
@@ -231,9 +234,9 @@
 }
 
 /* Hide default navigation */
-.rdp-pill .react-datepicker__navigation {
+/* .rdp-pill .react-datepicker__navigation {
   display: none;
-}
+} */
 
 /* Close button in overlay */
 .rdp-card .border-gray-300 {

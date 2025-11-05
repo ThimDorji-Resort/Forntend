@@ -95,7 +95,7 @@ select option:checked {
 }
 option:checked,
 option:hover {
-  background-color: #c19d68;
+  background-color: #006600;
   /* padding: 6px; */
   color: white;
 }

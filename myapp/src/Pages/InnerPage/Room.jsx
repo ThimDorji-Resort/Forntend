@@ -1,12 +1,14 @@
 
+
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
+import { FaBed } from "react-icons/fa"; // add this import at the top
 
 const Room = () => {
   return (
     <section className="font-inter">
-      <BreadCrumb title="ROOMS & SUITS" home={"/"} />
+      <BreadCrumb title="ROOMS & SUITES" home={"/"} />
 
       {/* All rooms */}
       <div
@@ -52,7 +54,7 @@ const Room = () => {
                   <span>Nu 7600</span>
                 </div>
 
-                <Link to={"/room_details"}>
+                <Link to={"/room_details2"}>
                   <button className="flex items-center justify-center text-[15px] leading-[38px] bg-black bg-opacity-90 hover:bg-opacity-100 absolute bottom-0 -left-40 px-6 py-1 text-white group-hover:left-0 transition-all duration-500 z-10">
                     View Details{" "}
                     <BsArrowRight className="w-4 h-4 ml-2 text-white transition-transform duration-300 group-hover:translate-x-1" />{" "}
@@ -69,7 +71,7 @@ const Room = () => {
                       LUXURY ROOM
                     </h4>
                     <Link
-                      to="/find_room"
+                      to="/room_details2"
                       state={{ price: "450", title: "Delux Family Rooms" }}
                     >
                       <h2 className="text-2xl lg:text-[24px] xl:text-[28px] leading-[26px] font-semibold text-black py-4 hover:text-khaki transition-colors duration-300">
@@ -84,14 +86,9 @@ const Room = () => {
                     <div className="px-[30px] flex items-center justify-between">
                       <div className="">
                         <span className="font-inter text-base flex items-center text-gray-800">
-                          <img
-                            src="/images/home-1/room-bottom-icon.png"
-                            alt="Bed Icon"
-                            className="filter brightness-0"
-                          />
-                          <span className="ml-[10px] font-medium">
-                            2 King Bed
-                          </span>
+<FaBed className="text-gray-800 text-xl" />
+<span className="ml-[10px] font-medium">2 King Bed</span>
+
                         </span>
                       </div>
                       <span className="w-[1px] h-[25px] bg-gray-300"></span>
@@ -137,7 +134,7 @@ const Room = () => {
                       LUXURY ROOM
                     </h4>
                     <Link
-                      to="/find_room"
+                      to="/room_details2"
                       state={{ price: "550", title: "Double Suite Rooms" }}
                     >
                       <h2 className="text-2xl lg:text-[24px] xl:text-[28px] leading-[26px] font-semibold text-black py-4 hover:text-khaki transition-colors duration-300">
@@ -152,11 +149,8 @@ const Room = () => {
                     <div className="px-[30px] flex items-center justify-between">
                       <div className="">
                         <span className="font-inter text-base flex items-center text-gray-800">
-                          <img
-                            src="/images/home-1/room-bottom-icon.png"
-                            alt="Bed Icon"
-                            className="filter brightness-0"
-                          />
+<FaBed className="text-gray-800 text-xl" />
+
                           <span className="ml-[10px] font-medium">
                             2 King Bed
                           </span>
@@ -168,6 +162,7 @@ const Room = () => {
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>

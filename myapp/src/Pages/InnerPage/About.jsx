@@ -43,11 +43,11 @@ const About = () => {
                 PARO, BHUTAN
               </h1>
 
-              <p className="text-sm xl:text-base md:text-sm lg:text-base font-normal leading-[26px] text-black dark:text-black font-Inter">
+              <p className="text-sm xl:text-base md:text-sm lg:text-base font-normal leading-[26px] text-[#333] dark:text-black font-Inter">
                At Thim Dorji Resort, we pride ourselves on offering a unique hospitality experience that blends comfort, warmth, and the charm of Paro. Each of our guestrooms opens up to stunning views of the Paro River, allowing guests to relax and unwind while being surrounded by nature’s serenity.         
               </p>
 
-              <p className="text-sm sm:text-base font-normal leading-[26px] mt-5 text-black dark:text-black font-Inter">
+              <p className="text-sm sm:text-base font-normal leading-[26px] mt-5 text-[#333] dark:text-black font-Inter">
                 Our team is dedicated to creating memorable stays, providing personalized service that reflects the local culture and traditions. Whether you’re here for a peaceful getaway or a memorable adventure, we ensure your stay is comfortable, authentic, and truly unforgettable.
               </p>
 
@@ -108,10 +108,10 @@ const About = () => {
               <h1 className="text-[22px] sm:text-2xl md:text-[28px] xl:text-[32px] 2xl:text-[38px] leading-[38px] lg:leading-[44px] text-lightBlack dark:text-white font-semibold font-Inter">
                 LUXURY BEST HOTEL IN TOWN 
               </h1>
-              <p className="text-sm sm:text-base font-Inter text-gray dark:text-lightGray font-normal leading-[26px]">
+              <p className="text-sm sm:text-base font-Inter text-[#333] dark:text-lightGray font-normal leading-[26px]">
                 Welcome! Our team is committed to making your stay comfortable and memorable with warm hospitality and personalized service.
               </p>
-              <p className="text-sm sm:text-base font-Inter italic leading-[26px] underline text-gray dark:text-lightGray font-normal ">
+              <p className="text-sm sm:text-base font-Inter italic leading-[26px]  text-[#333] dark:text-lightGray font-normal ">
              “Where you experience a unique hospitality culture
 and a Paro River view from the guestrooms”
               </p>
@@ -125,8 +125,8 @@ and a Paro River view from the guestrooms”
                   <h4 className="text-lg sm:text-[22px] leading-[26px] text-lightBlack dark:text-white font-semibold font-Inter">
                   Pema Wangchuck
                   </h4>
-                  <p className="pt-1 text-base leading-[26px] font-normal text-gray dark:text-lightGray flex items-center font-Inter">
-                    <span className="w-5 h-[1px] inline-block text-khaki bg-khaki mr-2"></span>
+                  <p className="pt-1 text-base leading-[26px] font-normal text-[#333] dark:text-lightGray flex items-center font-Inter">
+                    <span className="w-5 h-[1px] inline-block text-[#333] bg-khaki mr-2"></span>
                     Manger
                   </p>
                 </div>
@@ -137,136 +137,7 @@ and a Paro River view from the guestrooms”
         </div>
       </div>
 
-      {/* Expert Members */}
-      <div className="bg-white dark:bg-white py-20 2xl:py-[120px]">
-        <div className="Container">
-          {/* section header */}
-          <div
-            className="text-center sm:px-8 md:px-[80px] lg:px-[120px] xl:px-[200px] 2xl:px-[335px] mx-auto px-5 Container"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-          >
-            {/* Section logo */}
-            <div className="flex items-center justify-center space-x-2">
-              <hr className="w-[100px] h-[1px] bg-[#e5e5e5]" />
-              
-              <hr className="w-[100px] h-[1px] bg-[#e5e5e5]" />
-            </div>
-
-            <h1 className="text-xl sm:text-2xl md:text-3xl 2xl:text-[38px] leading-[42px] 2xl:leading-[52px] mt-[10px] mb-[14px] font-semibold uppercase font-Inter text-black dark:text-black">
-              MEET THE EXPER MEMBERS
-            </h1>
-
-            <p className="leading-7 lg:leading-[26px] font-normal text-sm sm:text-base font-Inter text-black dark:text-black">
-            The heart of Resort Thim Dorji is our dedicated team, always ready to welcome you with a smile.
-            </p>
-          </div>
-
-          {/* Section Content */}
-          <div className="mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] ">
-            {/* Member one */}
-            <div
-              className="member group"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <img src="/images/inner/member-1.jpg" className="w-full" alt="" />
-              <div className="relative">
-                <div className="px-4 lg:px-[30px] pt-5">
-                  <h3 className="text-xl sm:text-2xl lg:text-2xl xl:text-[28px] leading-7 md:leading-8 lg:leading-10 font-semibold text-black dark:text-black font-Inter text-center hover:opacity-0">
-                    Pema
-                  </h3>
-                  <p className="text-sm md:text-base leading-[26px] font-normal font-Inter text-black dark:text-black text-center group-hover:text-white dark:hover:text-white hover:opacity-0">
-                    General Manager
-                  </p>
-                </div>
-
-                {/* hover card (kept as-is for contrast over khaki background) */}
-                <div
-                  className="p-[30px] bg-khaki grid items-center justify-center absolute bottom-[-150px] sm:bottom-[-170px] md:bottom-[-150px] group-hover:bottom-[-38px] lg:group-hover:bottom-[-30px] transition-all duration-500 left-0 right-0"
-                >
-                  <div className="flex items-center justify-center space-x-4 text-white">
-                    <FaFacebookF />
-                    <BsTwitter />
-                    <FaLinkedinIn />
-                    <FaPinterestP />
-                  </div>
-                  <p className="text-white font-medium leading-10 text-xl lg:text-[22px] font-Inter">
-                    example@gmail.com
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Member two */}
-            <div
-              className="member group"
-              data-aos="fade-down"
-              data-aos-duration="1000"
-            >
-              <img src="/images/inner/member-2.jpg" className="w-full" alt="" />
-              <div className="relative">
-                <div className="px-4 lg:px-[30px] pt-5">
-                  <h3 className="text-xl sm:text-2xl lg:text-2xl xl:text-[28px] leading-7 md:leading-8 lg:leading-10 font-semibold text-black dark:text-black font-Inter text-center hover:opacity-0">
-                    Karma
-                  </h3>
-                  <p className="text-sm md:text-base leading-[26px] font-normal font-Inter text-black dark:text-black text-center group-hover:text-white dark:hover:text-white hover:opacity-0">
-                    Product Manager
-                  </p>
-                </div>
-
-                <div
-                  className="p-[30px] bg-khaki grid items-center justify-center absolute bottom-[-150px] sm:bottom-[-170px] md:bottom-[-150px] group-hover:bottom-[-38px] lg:group-hover:bottom-[-30px] transition-all duration-500 left-0 right-0"
-                >
-                  <div className="flex items-center justify-center space-x-4 text-white">
-                    <FaFacebookF />
-                    <BsTwitter />
-                    <FaLinkedinIn />
-                    <FaPinterestP />
-                  </div>
-                  <p className="text-white font-medium leading-10 text-xl lg:text-[22px] font-Inter">
-                    example@gmail.com
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Member three */}
-            <div
-              className="member group"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-            >
-              <img src="/images/inner/member-3.jpg" className="w-full" alt="" />
-              <div className="relative">
-                <div className="px-4 lg:px-[30px] pt-5">
-                  <h3 className="text-xl sm:text-2xl lg:text-2xl xl:text-[28px] leading-7 md:leading-8 lg:leading-10 font-semibold text-black dark:text-black font-Inter text-center hover:opacity-0">
-                    Thinley
-                  </h3>
-                  <p className="text-sm md:text-base leading-[26px] font-normal font-Inter text-black dark:text-black text-center group-hover:text-white dark:hover:text-white hover:opacity-0">
-                    General Manager
-                  </p>
-                </div>
-
-                <div
-                  className="p-[30px] bg-khaki grid items-center justify-center absolute bottom-[-150px] sm:bottom-[-170px] md:bottom-[-150px] group-hover:bottom-[-38px] lg:group-hover:bottom-[-30px] transition-all duration-500 left-0 right-0"
-                >
-                  <div className="flex items-center justify-center space-x-4 text-white">
-                    <FaFacebookF />
-                    <BsTwitter />
-                    <FaLinkedinIn />
-                    <FaPinterestP />
-                  </div>
-                  <p className="text-white font-medium leading-10 text-xl lg:text-[22px] font-Inter">
-                    example@gmail.com
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+      
     </section>
   );
 };

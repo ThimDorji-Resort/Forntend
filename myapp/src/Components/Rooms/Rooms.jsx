@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../../Components4/Testimonial/testimonials.css";
+import "../../Components/Testimonial/testimonials.css";
 import { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import ReactDatePicker from "react-datepicker";
@@ -8,11 +8,11 @@ import "./RoomsDatepicker.css"; // custom calendar CSS
 import { AiOutlineEye } from "react-icons/ai";
 import FsLightbox from "fslightbox-react";
 
-// Images (public folder URLs)
-const room1 = "/images/home/room1.jpeg";
-const room2 = "/images/home/room1.jpeg";
-const room3 = "/images/home/room2.jpeg";
-const room4 = "/images/home/room2.jpeg";
+// Import images
+import room1 from "/images/home/room1.jpeg";
+import room2 from "/images/home/room1.jpeg";
+import room3 from "/images/home/room2.jpeg";
+import room4 from "/images/home/room2.jpeg";
 
 const Rooms = () => {
   const [open, setOpen] = useState(false);
@@ -31,7 +31,6 @@ const Rooms = () => {
 
   // Lightbox
   const [toggler, setToggler] = useState(false);
-
   const lightboxSources = [room1, room2, room3, room4];
 
   useEffect(() => {
@@ -72,20 +71,22 @@ const Rooms = () => {
 
   return (
     <div className="bg-whiteSmoke dark:bg-white font-Inter">
-      <div className="relative z-[1]">
+      <div className="relative">
+        {/* ===== BOOKING SECTION ===== */}
         <div
-          className="Container-Hero bg-lightBlack dark:bg-normalBlack grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-5 items-center justify-center py-3 lg:py-4 xl:py-5 2xl:py-6 border-t-[3px] border-t-khaki mt-[-75px] left-0 right-0 z-[1]"
+          className="Container-Hero bg-lightBlack dark:bg-normalBlack grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 items-center justify-center font-Arial py-3 lg:py-4 xl:py-5 2xl:py-6 border-t-[3px] border-t-khaki 
+                     mx-auto  shadow-xl relative z-20 -mt-20 px-4 sm:px-6 lg:px-10 z-[1]"
           data-aos="fade-down"
           data-aos-duration="1000"
         >
           {/* Check In */}
           <div className="p-3">
-            <p className="text-sm text-lightGray ml-3">Check In</p>
+            <p className="text-sm text-[#A9A9A9] ml-3">Check In</p>
             {!useDesktopPicker ? (
               <div className="flex items-center pt-[2px]">
                 <input
                   type="date"
-                  className="border-none bg-transparent focus:outline-transparent focus:border-transparent text-white outline-0 text-sm lg:text-base focus:ring-transparent"
+                  className="border-none bg-transparent focus:outline-transparent text-white outline-0 text-sm lg:text-base focus:ring-transparent"
                   required
                   onChange={(e) =>
                     setCheckIn(e.target.value ? new Date(e.target.value) : null)
@@ -106,12 +107,12 @@ const Rooms = () => {
 
           {/* Check Out */}
           <div className="p-3">
-            <p className="text-sm text-lightGray ml-3">Check Out</p>
+            <p className="text-sm text-[#A9A9A9] ml-3">Check Out</p>
             {!useDesktopPicker ? (
-              <div className="flex items-center pt-[2px]">
+              <div className="flex items-center">
                 <input
                   type="date"
-                  className="border-none bg-transparent focus:outline-transparent focus:border-transparent text-white outline-0 text-sm lg:text-base focus:ring-transparent"
+                  className="border-none bg-transparent focus:outline-transparent text-white outline-0 text-sm lg:text-base focus:ring-transparent"
                   required
                   onChange={(e) =>
                     setCheckOut(
@@ -136,7 +137,7 @@ const Rooms = () => {
           <div className="p-3">
             <div className="text-white px-3 py-2 w-full transition-all duration-300 group relative">
               <span
-                className="flex items-center justify-between text-sm text-lightGray cursor-pointer"
+                className="flex items-center justify-between text-sm text-[#A9A9A9] cursor-pointer"
                 onClick={() => setOpen(!open)}
                 title="click here to open and close rooms extender"
               >
@@ -144,11 +145,11 @@ const Rooms = () => {
                 <BiChevronDown />
               </span>
               <div className="pt-[10px] text-sm sm:text-base">{room} Room</div>
-              <div className="absolute pt-5 z-20">
+              <div className="absolute pt-3 z-20">
                 <div
                   className={`shadow-2xl ${
                     open ? "" : "hidden"
-                  } rounded-sm bg-white text-black w-60 text-left dark:bg-normalBlack dark:text-white transition-all duration-500 text-sm py-4`}
+                  } bg-white text-black w-60 text-left dark:bg-normalBlack dark:text-white transition-all duration-500 text-sm py-2`}
                 >
                   <div className="py-2 px-5 group cursor-pointer">
                     <li className="flex items-center justify-between">
@@ -178,7 +179,7 @@ const Rooms = () => {
           <div className="p-3">
             <div className="text-white px-3 py-2 w-full transition-all duration-300 group relative">
               <span
-                className="flex items-center justify-between text-sm text-lightGray cursor-pointer"
+                className="flex items-center justify-between text-sm text-[#A9A9A9] cursor-pointer"
                 onClick={() => setGuestOpen(!guestOpen)}
                 title="click here to open and close Adult And Children extender"
               >
@@ -188,16 +189,16 @@ const Rooms = () => {
               <div className="pt-[10px] text-sm sm:text-base">
                 {adult} Adult, {children} Child
               </div>
-              <div className="absolute pt-5 z-20 ml-[-120px] sm:ml-0">
+              <div className="absolute pt-3 z-20 ml-[-120px] sm:ml-0">
                 <div
                   className={`shadow-2xl ${
                     guestOpen ? "" : "hidden"
-                  } rounded-sm bg-white text-black w-60 text-left dark:bg-normalBlack dark:text-white transition-all duration-500 text-sm py-4`}
+                  } bg-white text-black w-60 text-left dark:bg-normalBlack dark:text-white transition-all duration-500 text-sm py-2`}
                 >
                   <div className="py-2 px-5 group cursor-pointer">
-                    <li className="flex items-center justify-between">
+                    <li className="flex items-center justify-between mb-2">
                       <div>{adult} Adult</div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-2 ">
                         <button
                           className="w-5 h-5 md:w-6 md:h-6 bg-khaki text-white"
                           onClick={() => setAdult(adult + 1)}
@@ -235,102 +236,135 @@ const Rooms = () => {
             </div>
           </div>
 
-          {/* CTA */}
-          <Link to="/find_room">
-            <button className="w-[142px] h-10 lg:h-[50px] text-[15px] bg-khaki border border-khaki text-white mx-auto col-span-2 md:col-span-1 lg:col-span-1 relative z-10 before:absolute before:top-0 before:right-0 before:-z-10 before:w-0 before:h-full before:bg-lightBlack before:transition-all before:duration-500 hover:before:w-full hover:before:left-0">
-              Checkout Now
+          {/* Checkout CTA */}
+<Link
+  to="/available_rooms"
+  state={{ checkIn, checkOut, room, adult, children }}
+  className="col-span-2 md:col-span-1"
+>
+            <button className="w-full h-10 lg:h-[50px] text-[15px] bg-khaki border border-khaki text-white relative z-10 before:absolute before:top-0 before:right-0 before:-z-10 before:w-0 before:h-full before:bg-lightBlack before:transition-all before:duration-500 hover:before:w-full hover:before:left-0">
+              Check Availability
             </button>
           </Link>
         </div>
-      </div>
 
-      {/* ======= DESKTOP OVERLAY CALENDAR ======= */}
-      {useDesktopPicker && (showInOverlay || showOutOverlay) && (
-        <div
-          className={`fixed inset-0 z-40 bg-black/20 flex items-center justify-center px-4 rdp-backdrop ${
-            isClosing ? "is-closing" : ""
-          }`}
-          onClick={closeOverlay}
-        >
+        {/* ===== DESKTOP OVERLAY CALENDAR ===== */}
+        {useDesktopPicker && (showInOverlay || showOutOverlay) && (
           <div
-            className={`bg-white text-black rounded-2xl shadow-2xl max-w-[560px] w-full overflow-hidden rdp-card ${
-              isClosing ? "is-closing" : ""
-            }`}
-            onClick={(e) => e.stopPropagation()}
+            className={`fixed inset-0 z-[9999] bg-black/20 flex items-center justify-center px-4`}
+            onClick={closeOverlay}
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-              <h3 className="text-lg font-semibold">
-                {showInOverlay ? "Select Check-in" : "Select Check-out"}
-              </h3>
-              <button
-                onClick={closeOverlay}
-                className="px-3 py-1.5 border border-gray-300 hover:bg-gray-50 rounded-md text-sm"
-              >
-                Close
-              </button>
-            </div>
+            <div
+              className="bg-white text-black shadow-2xl max-w-[560px] w-full overflow-visible"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+                <h3 className="text-lg font-semibold">
+                  {showInOverlay ? "Select Check-in" : "Select Check-out"}
+                </h3>
+                <button
+                  onClick={closeOverlay}
+                  className="px-3 py-1.5 border border-[#D1D5DB] hover:bg-gray-50  text-sm"
+                >
+                  Close
+                </button>
+              </div>
+              <div className="p-3 md:p-5">
+<ReactDatePicker
+  inline
+  monthsShown={1}
+  calendarClassName="rdp-pill"
+  selected={showInOverlay ? checkIn : checkOut}
+  minDate={showInOverlay ? new Date() : checkIn || new Date()}
+  onChange={(date) => {
+    if (showInOverlay) {
+      setCheckIn(date);
+      if (checkOut && date && checkOut < date) setCheckOut(null);
+      closeOverlay();
+    } else {
+      setCheckOut(date);
+      closeOverlay();
+    }
+  }}
+  showDisabledMonthNavigation
+renderCustomHeader={({
+  date,
+  changeMonth,
+  changeYear,
+  decreaseMonth,
+  increaseMonth,
+  prevMonthButtonDisabled,
+  nextMonthButtonDisabled,
+}) => (
+  <div className="flex items-center justify-between px-3 py-2">
+    {/* Left side: Month & Year */}
+    <div className="flex items-center space-x-2">
+      {/* Month Dropdown */}
+      <select
+        value={date.getMonth()}
+        onChange={({ target: { value } }) => changeMonth(Number(value))}
+        className="border px-2 py-1 text-sm border-[#9CA3AF]"
+      >
+        {Array.from({ length: 12 }).map((_, i) => (
+          <option key={i} value={i}>
+            {new Date(0, i).toLocaleString("default", { month: "long" })}
+          </option>
+        ))}
+      </select>
 
-            {/* Calendar */}
-            <div className="p-3 md:p-5">
-              <ReactDatePicker
-                inline
-                monthsShown={1}
-                calendarClassName="rdp-pill"
-                renderCustomHeader={({ date, decreaseMonth, increaseMonth }) => (
-                  <div className="rdp-pill__header">
-                    <div className="rdp-pill__title">
-                      {date.toLocaleDateString(undefined, {
-                        month: "long",
-                        year: "numeric",
-                      })}
-                    </div>
-                    <div className="rdp-pill__controls">
-                      <button
-                        type="button"
-                        className="rdp-pill__btn rdp-pill__btn--up"
-                        onClick={increaseMonth}
-                      >
-                        ▲
-                      </button>
-                      <span className="rdp-pill__divider" />
-                      <button
-                        type="button"
-                        className="rdp-pill__btn rdp-pill__btn--down"
-                        onClick={decreaseMonth}
-                      >
-                        ▼
-                      </button>
-                    </div>
-                  </div>
-                )}
-                selected={showInOverlay ? checkIn : checkOut}
-                minDate={showInOverlay ? new Date() : checkIn || new Date()}
-                onChange={(date) => {
-                  if (showInOverlay) {
-                    setCheckIn(date);
-                    if (checkOut && date && checkOut < date) setCheckOut(null);
-                    closeOverlay();
-                  } else {
-                    setCheckOut(date);
-                    closeOverlay();
-                  }
-                }}
-                showDisabledMonthNavigation
-              />
+      {/* Year Dropdown */}
+      <select
+        value={date.getFullYear()}
+        onChange={({ target: { value } }) => changeYear(Number(value))}
+        className="border px-2 py-1 text-sm border-[#9CA3AF]"
+      >
+        {Array.from({ length: 11 }, (_, i) => {
+          const year = new Date().getFullYear() + i; // current year to 10 years ahead
+          return (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+
+    {/* Right side: Month arrows in a row */}
+    <div className="flex items-center space-x-2">
+      <button
+        onClick={decreaseMonth}
+        disabled={prevMonthButtonDisabled}
+        className="px-2 py-1 border border-[#9CA3AF] text-[#1F1F1F]"
+        title="Previous Month"
+      >
+        ▲
+      </button>
+      <button
+        onClick={increaseMonth}
+        disabled={nextMonthButtonDisabled}
+        className="px-2 py-1 border border-[#9CA3AF] text-[#1F1F1F]"
+        title="Next Month"
+      >
+        ▼
+      </button>
+    </div>
+  </div>
+)}
+/>
+
+              </div>
             </div>
           </div>
-        </div>
-      )}
-      {/* ======= /DESKTOP OVERLAY CALENDAR ======= */}
+        )}
+        {/* ===== /DESKTOP OVERLAY CALENDAR ===== */}
 
-      {/* ======= Two-panel background section ======= */}
-      <section
-        className="relative w-full min-h-[758px] overflow-hidden -mt-48 lg:-mt-36"
-        aria-label="Rooms & Suites two-panel background"
-      >
-        <div className="absolute inset-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+        {/* ===== ROOMS SECTION ===== */}
+        <section
+          className="relative w-full overflow-hidden mt-[-163px] md:mt-[-135px] lg:mt-[-143px] xl:mt-[-57px] h-[880px] lg:h-[700px]"
+          aria-label="Rooms & Suites two-panel background"
+          style={{ zIndex: 0 }}
+        >
+          <div className="absolute inset-0 grid grid-cols-1 lg:grid-cols-2 h-full">
             {/* LEFT PANEL */}
             <div
               className="relative group overflow-hidden"
@@ -341,21 +375,21 @@ const Rooms = () => {
                 className="absolute inset-0 bg-center bg-cover transition-all duration-300 group-hover:grayscale"
                 style={{ backgroundImage: `url(${room1})` }}
               />
-              {/* hover slide-up block */}
               <div className="absolute left-0 right-0 bottom-0 m-6">
                 <div className="text-center translate-y-[200px] group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <span
-                    className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white dark:bg-lightBlack mb-6 grid place-items-center mx-auto"
-                    onClick={() => setToggler(!toggler)}
+                  <Link
+                    to="/room_details2"
+                    className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white dark:bg-lightBlack mb-6 grid place-items-center mx-auto hover:scale-105 transition-transform duration-200"
                   >
-                    <AiOutlineEye size={20} className="text-khaki" />
-                  </span>
+                    <AiOutlineEye size={20} className="text-[#006600]" />
+                  </Link>
+
                   <div className="bg-white dark:bg-lightBlack text-center py-10">
                     <h4 className="text-lg md:text-xl lg:text-2xl leading-8 font-medium text-lightBlack dark:text-white">
                       Junior Suite
                     </h4>
-                    <p className="mt-2 text-sm leading-6 text-gray dark:text-lightGray font-normal hover:text-khaki">
-                      <Link to="/home5/room">$90 | Nu 7600</Link>
+                    <p className="mt-2 text-sm leading-6 text-gray dark:text-lightGray font-normal">
+                      $90 | Nu 7600
                     </p>
                   </div>
                 </div>
@@ -370,42 +404,35 @@ const Rooms = () => {
             >
               <div
                 className="absolute inset-0 bg-center bg-cover transition-all duration-300 group-hover:grayscale"
-                style={{ backgroundImage: `url(${room2})` }}
+                style={{ backgroundImage: "url('/images/home/room2.jpeg')" }}
               />
               <div className="absolute left-0 right-0 bottom-0 m-6">
                 <div className="text-center translate-y-[200px] group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <span
-                    className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white dark:bg-lightBlack mb-6 grid place-items-center mx-auto"
-                    onClick={() => setToggler(!toggler)}
+                  <Link
+                    to="/room_details2"
+                    className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white dark:bg-lightBlack mb-6 grid place-items-center mx-auto hover:scale-105 transition-transform duration-200"
                   >
-                    <AiOutlineEye size={20} className="text-khaki" />
-                  </span>
+                    <AiOutlineEye size={20} className="text-[#006600]" />
+                  </Link>
+
                   <div className="bg-white dark:bg-lightBlack text-center py-10">
                     <h4 className="text-lg md:text-xl lg:text-2xl leading-8 font-medium text-lightBlack dark:text-white">
                       Deluxe Double
                     </h4>
-                    <p className="mt-2 text-sm leading-6 text-gray dark:text-lightGray font-normal hover:text-khaki">
-                      <Link to="/home5/room">$95 | Nu 8200</Link>
+                    <p className="mt-2 text-sm leading-6 text-gray dark:text-lightGray font-normal">
+                      $95 | Nu 8200
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* FOREGROUND TITLE */}
-        <div className="relative z-10 pointer-events-none">
-          <div className="flex items-start justify-center pt-8 lg:pt-10 mt-32">
-            <h1 className="pointer-events-auto text-white drop-shadow text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px] leading-7 sm:leading-8 md:leading-9 lg:leading-[42px] 2xl:leading-[52px] font-semibold uppercase">
-              Rooms & Suites
-            </h1>
-          </div>
-        </div>
-
-        {/* Lightbox */}
-        <FsLightbox toggler={toggler} sources={lightboxSources} />
-      </section>
+          {/* Lightbox */}
+          <FsLightbox toggler={toggler} sources={lightboxSources} />
+        </section>
+        {/* ===== /ROMS SECTION ===== */}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,8 @@
+
 const HotelAndFacilities = () => {
   return (
     <section className="bg-lightBlack z-[1] font-Inter">
-      <div className="py-[110px] bg-no-repeat bg-top bg-opacity-[0.07]">
+      <div className="py-[80px] bg-no-repeat bg-top bg-opacity-[0.07]">
         <div className="Container">
           <div
             className="text-center mx-auto px-5 sm:px-8 md:px-[80px] lg:px-[120px] xl:px-[200px] 2xl:px-[335px]"
@@ -10,13 +11,12 @@ const HotelAndFacilities = () => {
           >
             {/* Section logo */}
             <div className="flex items-center justify-center space-x-2 mb-4 lg:mb-5">
-              <hr className="w-[100px] h-[1px] bg-[#3b3b3b] text-[#3b3b3b]" />
-              <hr className="w-[100px] h-[1px] bg-[#3b3b3b] text-[#3b3b3b]" />
+              <hr className="w-[150px] h-[1px] bg-[#3b3b3b] text-[#3b3b3b]" />
             </div>
-            <h1 className="text-2xl md:text-3xl 2xl:text-[38px] leading-[38px] lg:leading-[44px] 2xl:leading-[52px] text-white mb-[6px] font-semibold uppercase">
+            <h1 className="text-2xl md:text-3xl 2xl:text-[38px] leading-[38px] lg:leading-[44px] 2xl:leading-[52px] text-white mb-[15px] font-semibold uppercase">
               FACILITIES
             </h1>
-            <p className="leading-[26px] text-lightGray font-normal text-sm sm:text-base">
+            <p className="leading-[26px] text-[#A9A9A9] font-normal text-sm sm:text-base">
               At Thim Dorji Resort, we provide a range of modern facilities 
               blended with Bhutanese hospitality to ensure your stay is both 
               comfortable and memorable.
@@ -29,8 +29,8 @@ const HotelAndFacilities = () => {
             data-aos-duration="1000"
           >
             {/* Facility 1 */}
-            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group hover:border-khaki">
-              <div className="absolute inset-0 bg-[url('/images/home/serve.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
+            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group ">
+              <div className="absolute inset-0 bg-[url('/images/home/serve.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center transition-all duration-300">
                 <div>
                   <img
@@ -40,35 +40,35 @@ const HotelAndFacilities = () => {
                   />
                 </div>
                 <div className="">
-                  <h4 className="text-[22px] leading-[52px] text-white font-medium mt-[45px] relative before:absolute before:w-[1px] before:h-[25px] before:left-[50%] before:top-[-27px] before:bg-slate-500 before:group-hover:bg-khaki">
-                    Room Services
+                  <h4 className="text-[20px] leading-[30px] text-white font-small mt-[15px]">
+                    Room Service
                   </h4>
                 </div>
               </div>
             </div>
 
             {/* Facility 2 */}
-            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group hover:border-khaki">
-              <div className="absolute inset-0 bg-[url('/images/home/wifiwifi.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
+            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group">
+              <div className="absolute inset-0 bg-[url('/images/home/wifi.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center transition-all duration-300">
                 <div>
                   <img
-                    src="/images/home/wifi.png"
+                    src="/images/home/wifi1.png"
                     alt="Wi-Fi Internet"
                     className="mx-auto"
                   />
                 </div>
                 <div className="">
-                  <h4 className="text-[22px] leading-[52px] text-white font-medium mt-[45px] relative before:absolute before:w-[1px] before:h-[25px] before:left-[50%] before:top-[-27px] before:bg-slate-500 before:group-hover:bg-khaki">
-                    Wi-Fi Internet
+                  <h4 className="text-[20px] leading-[30px] text-white font-small mt-[15px]">
+                    Free Wi-Fi
                   </h4>
                 </div>
               </div>
             </div>
 
             {/* Facility 3 */}
-            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group hover:border-khaki">
-              <div className="absolute inset-0 bg-[url('/images/home/park.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
+            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group">
+              <div className="absolute inset-0 bg-[url('/images/home/park.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center transition-all duration-300">
                 <div>
                   <img
@@ -78,7 +78,7 @@ const HotelAndFacilities = () => {
                   />
                 </div>
                 <div className="">
-                  <h4 className="text-[22px] leading-[52px] text-white font-medium mt-[45px] relative before:absolute before:w-[1px] before:h-[25px] before:left-[50%] before:top-[-27px] before:bg-slate-500 before:group-hover:bg-khaki">
+                  <h4 className="text-[20px] leading-[30px] text-white font-small mt-[15px]">
                     Free Parking
                   </h4>
                 </div>
@@ -86,27 +86,27 @@ const HotelAndFacilities = () => {
             </div>
 
             {/* Facility 4 */}
-            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group hover:border-khaki">
-              <div className="absolute inset-0 bg-[url('/images/home/bf.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
+            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group">
+              <div className="absolute inset-0 bg-[url('/images/home/dinner.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center transition-all duration-300">
                 <div>
                   <img
-                    src="/images/home/dinner.png"
+                    src="/images/home/dinner1.png"
                     alt="Breakfast"
                     className="mx-auto"
                   />
                 </div>
                 <div className="">
-                  <h4 className="text-[22px] leading-[52px] text-white font-medium mt-[45px] relative before:absolute before:w-[1px] before:h-[25px] before:left-[50%] before:top-[-27px] before:bg-slate-500 before:group-hover:bg-khaki">
-                    Breakfast
+                  <h4 className="text-[20px] leading-[30px] text-white font-small mt-[15px]">
+                    Complimentary Breakfast
                   </h4>
                 </div>
               </div>
             </div>
 
             {/* Facility 5 */}
-            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group hover:border-khaki">
-              <div className="absolute inset-0 bg-[url('/images/home/cam.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
+            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group">
+              <div className="absolute inset-0 bg-[url('/images/home/cam.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center transition-all duration-300">
                 <div>
                   <img
@@ -116,16 +116,16 @@ const HotelAndFacilities = () => {
                   />
                 </div>
                 <div className="">
-                  <h4 className="text-[22px] leading-[52px] text-white font-medium mt-[45px] relative before:absolute before:w-[1px] before:h-[25px] before:left-[50%] before:top-[-27px] before:bg-slate-500 before:group-hover:bg-khaki">
-                     Under protection
+                  <h4 className="text-[20px] leading-[30px] text-white font-small mt-[15px]">
+                     CCTV Surveillance
                   </h4>
                 </div>
               </div>
             </div>
 
             {/* Facility 6 */}
-            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group hover:border-khaki">
-              <div className="absolute inset-0 bg-[url('/images/home/heat.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
+            <div className="h-[200px] w-[191px] pt-[37px] pb-[27px] border border-[#343434] text-center transition-all duration-500 relative z-[1] overflow-hidden group">
+              <div className="absolute inset-0 bg-[url('/images/home/heat.png')] bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-0 transform -translate-x-full group-hover:translate-x-0"></div>
               <div className="relative z-10 h-full flex flex-col items-center justify-center transition-all duration-300">
                 <div>
                   <img
@@ -135,7 +135,7 @@ const HotelAndFacilities = () => {
                   />
                 </div>
                 <div className="">
-                  <h4 className="text-[22px] leading-[52px] text-white font-medium mt-[45px] relative before:absolute before:w-[1px] before:h-[25px] before:left-[50%] before:top-[-27px] before:bg-slate-500 before:group-hover:bg-khaki">
+                  <h4 className="text-[20px] leading-[30px] text-white font-small mt-[15px]">
                     Room Heating
                   </h4>
                 </div>

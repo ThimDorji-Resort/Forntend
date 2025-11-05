@@ -1,3 +1,4 @@
+
 import { HiArrowLongRight } from "react-icons/hi2";
 import BreadCrumb from "../../Components/BreadCrumb/BreadCrumb";
 import { Link } from "react-router-dom";
@@ -25,7 +26,7 @@ const Services = () => {
                 SERVICES
               </h5>
               <h1 className="text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px] leading-[38px] lg:leading-[44px] font-semibold">
-                ENJOY COMPLETE & BEST QUALITY FACILITIES
+                ENJOY  BEST QUALITY FACILITIES
               </h1>
             </div>
 
@@ -66,7 +67,7 @@ const Services = () => {
                   It is a column-free open space, with a panoramic view of the Bhutanese countryside, designed specially for yoga and meditation sessions.
                 </p>
                 <Link to="/service_details" aria-label="Read more about Gym Training Grounds">
-                  <HiArrowLongRight size={30} className="hover:opacity-70" />
+                  <HiArrowLongRight size={40} className="hover:opacity-70" />
                 </Link>
               </div>
             </div>
@@ -93,7 +94,7 @@ const Services = () => {
                   For groups, functions, or celebrations, we can also arrange custom buffets to suit your needs.
                 </p>
                 <Link to="/service_details" aria-label="Read more about Indoor Swimming Pool">
-                  <HiArrowLongRight size={30} className="hover:opacity-70" />
+                  <HiArrowLongRight size={40} className="hover:opacity-70" />
                 </Link>
               </div>
 
@@ -141,7 +142,7 @@ const Services = () => {
                   Each day features a different selection of dishes, allowing guests to enjoy a variety of flavors throughout their stay.
                 </p>
                 <Link to="/service_details" aria-label="Read more about The Restaurant Center">
-                  <HiArrowLongRight size={30} className="hover:opacity-70" />
+                  <HiArrowLongRight size={40} className="hover:opacity-70" />
                 </Link>
               </div>
             </div>
@@ -170,7 +171,7 @@ const Services = () => {
                       after are Holisticly facilitate stand-alone
                     </p>
                     <Link to="/service_details" aria-label="Read more about Gym Training Grounds">
-                      <HiArrowLongRight size={30} className="hover:opacity-70" />
+                      <HiArrowLongRight size={40} className="hover:opacity-70" />
                     </Link>
                   </div>
 
@@ -189,17 +190,23 @@ const Services = () => {
             )}
 
             {/* NEW: bottom-right toggle button (same side), after all sections */}
-            <div className="px-3 sm:px-5 mt-10 flex md:justify-end">
-              <button
-                type="button"
-                className="btn-items inline-flex items-center justify-center px-5 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
-                style={{ backgroundColor: "#000", color: "#fff", border: "1px solid #000" }}
-                onClick={() => setShowAll((v) => !v)}
-                aria-expanded={showAll}
-              >
-                {showAll ? "view less" : "view more"}
-              </button>
-            </div>
+<div className="px-3 sm:px-5 mt-10 flex md:justify-end">
+  <button
+    type="button"
+    className="btn-items inline-flex items-center justify-center px-5 py-2 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+    style={{
+      backgroundColor: "#000",
+      color: "#fff",
+      border: "1px solid #000",
+      fontFamily: "Arial, sans-serif",
+    }}
+    onClick={() => setShowAll((v) => !v)}
+    aria-expanded={showAll}
+  >
+    {showAll ? "view less" : "view more"}
+  </button>
+</div>
+
           </div>
         </section>
       </div>
