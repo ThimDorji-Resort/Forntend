@@ -23,11 +23,11 @@ const AdminSidebar = () => {
           {!isCollapsed ? (
             <div className="flex items-center justify-center w-full">
               {/* Bigger Logo */}
-              <img 
-                src={logo} 
-                alt="Resort Thim-Dorji Logo" 
-                className="w-32 h-32 object-contain"
-              />
+             <img 
+  src={logo} 
+  alt="Resort Thim-Dorji Logo" 
+  className="w-40 h-40 object-contain" // 10rem ≈ 160px
+/>
             </div>
           ) : (
             <div className="flex justify-center w-full">

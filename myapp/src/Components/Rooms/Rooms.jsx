@@ -359,7 +359,7 @@ const Rooms = () => {
                     className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white dark:bg-lightBlack mb-6 grid place-items-center mx-auto"
                     onClick={() => setToggler(!toggler)}
                   >
-                    <AiOutlineEye size={20} className="text-khaki" />
+                    <AiOutlineEye size={20} className="text-white" />
                   </span>
                   <div className="bg-white dark:bg-lightBlack text-center py-10">
                     <h4 className="text-lg md:text-xl lg:text-2xl leading-8 font-medium text-lightBlack dark:text-white">
@@ -393,7 +393,7 @@ const Rooms = () => {
                     className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white dark:bg-lightBlack mb-6 grid place-items-center mx-auto"
                     onClick={() => setToggler(!toggler)}
                   >
-                    <AiOutlineEye size={20} className="text-khaki" />
+                    <AiOutlineEye size={20} className="text-white" />
                   </span>
                   <div className="bg-white dark:bg-lightBlack text-center py-10">
                     <h4 className="text-lg md:text-xl lg:text-2xl leading-8 font-medium text-lightBlack dark:text-white">
@@ -412,30 +412,28 @@ const Rooms = () => {
 
         {/* FOREGROUND TITLE (doesn't block hover) */}
         <div
-  className="relative z-10 pointer-events-none"
-  style={{ zIndex: 1 }}
->
-  <div className="flex items-start justify-center pt-8 lg:pt-10 mt-32"> {/* Added mt-20 */}
-   <h1
-  className="pointer-events-auto text-white drop-shadow text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px]
+          className="relative z-10 pointer-events-none"
+          style={{ zIndex: 1 }}
+        >
+          <div className="flex items-start justify-center pt-8 lg:pt-10 mt-32">
+            {" "}
+            {/* Added mt-20 */}
+            <h1
+              className="pointer-events-auto text-white drop-shadow text-[22px] sm:text-2xl md:text-3xl 2xl:text-[38px]
              leading-7 sm:leading-8 md:leading-9 lg:leading-[42px] 2xl:leading-[52px]
              font-semibold uppercase text-center"
-  style={{
-    textShadow:
-      "0 3px 8px rgba(0,0,0,0.75), 0 6px 16px rgba(0,0,0,0.45)",
-  }}
->
-  Rooms & Suites
-</h1>
-
-  </div>
-</div>
+              style={{
+                textShadow:
+                  "0 3px 8px rgba(0,0,0,0.75), 0 6px 16px rgba(0,0,0,0.45)",
+              }}
+            >
+              Rooms & Suites
+            </h1>
+          </div>
+        </div>
 
         {/* Lightbox */}
-        <FsLightbox
-          toggler={toggler}
-          sources={lightboxSources}
-        />
+        <FsLightbox toggler={toggler} sources={lightboxSources} />
       </section>
       {/* ======= /Two-panel background section ======= */}
     </div>

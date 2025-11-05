@@ -10,6 +10,7 @@ import About from "../Pages/InnerPage/About.jsx";
 import Room from "../Pages/InnerPage/Room";
 import Services from "../Pages/InnerPage/Services.jsx";
 import ServiceDetails from "../Pages/InnerPage/ServiceDetails.jsx";
+import Checkout from "../Pages/InnerPage/CheckOut.jsx"
 
 // Admin components
 import AdminLayout from "../Admin/AdminLayout.jsx";
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },
       { path: "service_details", element: <ServiceDetails /> },
+         { path: "checkout", element: <Checkout /> },
     ],
   },
   {

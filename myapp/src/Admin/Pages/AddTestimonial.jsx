@@ -1,4 +1,3 @@
-// src/Admin/Pages/AddTestimonial.jsx
 import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -92,9 +91,9 @@ const AddTestimonial = () => {
             data-error={!!errors.name}
             value={form.name}
             onChange={(e) => setField("name", e.target.value)}
-            placeholder="Pema Wangmo"
+            placeholder="Enter your name"
             className={[
-              "w-full h-11 px-3 bg-white text-black border outline-none rounded-none",
+              "w-full h-11 px-3 bg-white text-black border outline-none rounded-none placeholder-gray-500",
               errors.name
                 ? "border-red-600"
                 : "border-gray-300 focus:border-[color:var(--green)]",
@@ -113,9 +112,9 @@ const AddTestimonial = () => {
             data-error={!!errors.stay}
             value={form.stay}
             onChange={(e) => setField("stay", e.target.value)}
-            placeholder="July 2025"
+            placeholder="Enter your stay"
             className={[
-              "w-full h-11 px-3 bg-white text-black border outline-none rounded-none",
+              "w-full h-11 px-3 bg-white text-black border outline-none rounded-none placeholder-gray-300",
               errors.stay
                 ? "border-red-600"
                 : "border-gray-300 focus:border-[color:var(--green)]",
@@ -135,9 +134,9 @@ const AddTestimonial = () => {
             value={form.text}
             onChange={(e) => setField("text", e.target.value)}
             rows={5}
-            placeholder="Write the testimonial…"
+            placeholder="Write your testimonial here..."
             className={[
-              "w-full px-3 py-3 bg-white text-black border outline-none resize-y rounded-none",
+              "w-full px-3 py-3 bg-white text-black border outline-none resize-y rounded-none placeholder-gray-500",
               errors.text
                 ? "border-red-600"
                 : "border-gray-300 focus:border-[color:var(--green)]",
@@ -159,9 +158,10 @@ const AddTestimonial = () => {
               type="button"
               onClick={pickImage}
               className={[
-                "px-4 h-10 inline-flex items-center justify-center text-sm font-medium border rounded-none",
-                errors.image ? "border-red-600" : "border-gray-300",
-                "hover:bg-gray-100",
+                "px-4 h-10 inline-flex items-center justify-center text-sm font-medium border rounded-none transition",
+                errors.image
+                  ? "border-red-600 hover:bg-red-50"
+                  : "border-gray-300 hover:bg-gray-100",
               ].join(" ")}
             >
               Upload
@@ -196,7 +196,7 @@ const AddTestimonial = () => {
         <div className="flex items-center justify-center">
           <button
             type="submit"
-            className="w-64 h-12 text-white font-semibold rounded-none"
+            className="w-64 h-12 text-white font-semibold rounded-none hover:opacity-90 transition"
             style={{ backgroundColor: GREEN }}
           >
             Publish
