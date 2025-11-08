@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { setAlert } from "../utils/sweetAlert";
+import { Plus } from "lucide-react";
 
 const initialReceptionists = [
   { id: 1, username: "Receptionist1", password: "pass123" },
@@ -48,15 +49,18 @@ const Receptionists = () => {
   };
 
   return (
-    <div className="p-2">
+    <div className="px-2">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Receptionists</h1>
-        <button
-          className="bg-[#006600] text-white px-10 py-2 hover:bg-green-800"
-          onClick={() => setShowAddPopup(true)}
-        >
-          Add New
-        </button>
+<button
+  className="inline-flex items-center gap-2 px-4 h-10 text-md text-white shadow-md hover:shadow-lg transition"
+  style={{ backgroundColor: "#006600" }}
+  onClick={() => setShowAddPopup(true)} // <-- show popup on click
+>
+  <Plus size={18} />
+  Add New
+</button>
+
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -64,7 +68,7 @@ const Receptionists = () => {
           <div key={rec.id} className="bg-white shadow p-12 flex flex-col items-center gap-6">
             <p className="font-semibold">{rec.username}</p>
             <button
-              className="bg-[#006600] text-white px-10 py-1 hover:bg-green-800"
+              className="bg-[#006600] text-white px-10 py-2 hover:bg-green-800"
               onClick={() => navigate("/receptionist-details", { state: { receptionist: rec } })}
             >
               View
@@ -111,8 +115,7 @@ const Receptionists = () => {
               )}
               {touchedPassword && newPassword && !validatePassword(newPassword) && (
                 <p className="text-red-500 text-sm mt-1">
-                  Password must be 8+ chars, include uppercase, lowercase, number & special char
-                </p>
+Password must be at least 8 characters and include an uppercase letter, a lowercase letter, a number, and a special character.                </p>
               )}
             </div>
 

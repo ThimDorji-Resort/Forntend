@@ -19,7 +19,6 @@ export const setAlert = async ({
     confirmButtonText,
     cancelButtonText,
     color: "#fff",
-    iconColor: "#fff",
     background: "#006600",
   });
 

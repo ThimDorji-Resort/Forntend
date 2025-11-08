@@ -340,16 +340,18 @@ const handleCancelBooking = async () => {
     <p><strong>Booking No:</strong> {booking.bookingNo}</p>
   </div>
 
-  <p><strong>Name:</strong> {firstName} {lastName}</p>
-  <p><strong>Email:</strong> {email}</p>
-  <p><strong>Country:</strong> {country}</p>
-  <p><strong>Phone:</strong> {phoneCode} {phone}</p>
-  <p><strong>Room Type:</strong> {selectedRoomType}</p>
+<p><strong>Name:</strong> {firstName} {lastName}</p>
+<p><strong>Email:</strong> {email}</p>
+<p><strong>Country:</strong> {country}</p>
+<p><strong>Phone:</strong> {phoneCode} {phone}</p>
+<p><strong>Room Type:</strong> {selectedRoomType}</p>
+{bookingStatus !== "PENDING" && (
   <p><strong>Room No:</strong> {selectedRoomNo}</p>
-  <p><strong>Check-In:</strong> {checkInDate?.toLocaleDateString()}</p>
-  <p><strong>Check-Out:</strong> {checkOutDate?.toLocaleDateString()}</p>
-  <p><strong>Adults:</strong> {adults}</p>
-  <p><strong>Children:</strong> {children}</p>
+)}
+<p><strong>Check-In:</strong> {checkInDate?.toLocaleDateString()}</p>
+<p><strong>Check-Out:</strong> {checkOutDate?.toLocaleDateString()}</p>
+<p><strong>Adults:</strong> {adults}</p>
+<p><strong>Children:</strong> {children}</p>
 
   {/* Special Request full width */}
   <div className="col-span-1 md:col-span-2">
@@ -359,22 +361,39 @@ const handleCancelBooking = async () => {
 
           {bookingStatus === "PENDING" && (
             <div className="col-span-1 md:col-span-2">
-              <label className="font-semibold">Journal Number:</label>
-              <input
-                type="text"
-                value={journalInput}
-                onChange={e => setJournalInput(e.target.value)}
-                placeholder="Enter Journal Number"
-                className="mt-1 border border-gray-300 px-3 py-2 w-full  focus:outline-none focus:ring-2 focus:ring-green-300"
-              />
-<div className="flex justify-center mt-7">
-  <button
-    className="bg-[#006600] text-white px-6 py-2 shadow hover:bg-green-800 transition w-2/5"
-    onClick={handleConfirmBooking}
-  >
-    Confirm Booking
-  </button>
-</div>
+    {/* Room Number */}
+    <div>
+      <label className="font-semibold">Room Number:</label>
+      <input
+        type="text"
+        value={selectedRoomNo}
+        onChange={e => setSelectedRoomNo(e.target.value)}
+        placeholder="Enter Room Number"
+        className="mt-1 mb-4 border border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-300"
+      />
+    </div>
+
+    {/* Journal Number */}
+    <div>
+      <label className="font-semibold">Journal Number:</label>
+      <input
+        type="text"
+        value={journalInput}
+        onChange={e => setJournalInput(e.target.value)}
+        placeholder="Enter Journal Number"
+        className="mt-1 mb-4 border border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-300"
+      />
+    </div>
+
+    {/* Confirm Booking Button full width below the two fields */}
+    <div className="col-span-1 md:col-span-2 flex justify-center mt-4">
+      <button
+        className="bg-[#006600] text-white px-6 py-2 shadow hover:bg-green-800 transition w-full md:w-2/3"
+        onClick={handleConfirmBooking}
+      >
+        Confirm Booking
+      </button>
+    </div>
 
             </div>
           )}

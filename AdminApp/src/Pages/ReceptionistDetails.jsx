@@ -78,18 +78,18 @@ const ReceptionistDetails = () => {
   };
 
   return (
-    <div className="p-6 relative">
+    <div className="px-2 py-4 relative">
       {/* Back button top-right */}
       <button
-        className="absolute right-2 top-2 text-gray-600 font-medium hover:underline"
+        className="absolute right-2 top-2 px-4 py-2 border border-gray-300 text-gray-300"
         onClick={() => navigate("/receptionists")}
       >
-        &larr; Back
+         Back
       </button>
 
       <h1 className="text-2xl font-semibold mb-6 text-center">Receptionist Details</h1>
 
-      <div className="bg-white shadow p-6 rounded w-96 mx-auto flex flex-col gap-4">
+      <div className="bg-white shadow p-6  w-96 mx-auto flex flex-col gap-4">
         {/* Username */}
         <div>
           <label className="block text-gray-700 font-medium mb-1">Username</label>
@@ -97,7 +97,7 @@ const ReceptionistDetails = () => {
             type="text"
             value={username}
             readOnly
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
+            className="w-full border border-gray-300  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
           />
         </div>
 
@@ -109,7 +109,7 @@ const ReceptionistDetails = () => {
               type={showPassword ? "text" : "password"}
               value={receptionist.password}
               readOnly
-              className="w-full border border-gray-300 rounded px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-green-300"
+              className="w-full border border-gray-300  px-3 py-2 pr-10 focus:outline-none focus:ring-2 focus:ring-green-300"
             />
             <button
               onClick={() => setShowPassword(!showPassword)}
@@ -140,7 +140,7 @@ const ReceptionistDetails = () => {
       {/* Change Password Modal */}
       {showChangePwModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded w-96 shadow-lg flex flex-col gap-4">
+          <div className="bg-white p-6  w-96 shadow-lg flex flex-col gap-4">
             <h2 className="text-xl font-semibold mb-2 text-center">Change Password</h2>
 
             <div>
@@ -152,15 +152,14 @@ const ReceptionistDetails = () => {
                   setNewPassword(e.target.value);
                   setTouchedNew(true);
                 }}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
+                className="w-full border border-gray-300  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
               />
               {touchedNew && !newPassword && (
                 <p className="text-red-500 text-sm mt-1">New password is required</p>
               )}
               {touchedNew && newPassword && !validatePassword(newPassword) && (
                 <p className="text-red-500 text-sm mt-1">
-                  Must be 8+ chars, include uppercase, lowercase, number & special char
-                </p>
+                  Password must be at least 8 characters and include an uppercase letter, a lowercase letter, a number, and a special character.                </p>
               )}
             </div>
 
@@ -173,7 +172,7 @@ const ReceptionistDetails = () => {
                   setConfirmPassword(e.target.value);
                   setTouchedConfirm(true);
                 }}
-                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
+                className="w-full border border-gray-300  px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-300"
               />
               {touchedConfirm && !confirmPassword && (
                 <p className="text-red-500 text-sm mt-1">Confirm password is required</p>

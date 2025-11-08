@@ -8,10 +8,10 @@ const Sidebar = () => {
 
   const menuItems = [
     { path: "/dashboard", label: "DASHBOARD" },
-    { path: "/rooms", label: "ROOM" },
+    { path: "/admin-rooms", label: "ROOM" },
     { path: "/booking", label: "BOOKING" },
-    { path: "/facilities", label: "FACILITIES" },
-    { path: "/testimonials", label: "TESTIMONIALS" },
+    { path: "/admin-facilities", label: "FACILITIES" },
+    { path: "/admin-testimonials", label: "TESTIMONIALS" },
     { path: "/receptionists", label: "RECEPTIONIST" },
   ];
 
