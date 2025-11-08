@@ -127,17 +127,19 @@ const handleCancelBooking = async () => {
 };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 relative">
-      <button
-        className="absolute top-4 right-4 text-gray-500 text-3xl font-bold hover:text-[#006600] transition"
-        onClick={() => navigate("/booking", { state: { activeTab } })}
-      >
-        ×
-      </button>
+    <div className="min-h-screen bg-gray-50 px-2 relative">
 
+      <div className="flex justify-between items-center mb-4">
       <h1 className="text-2xl font-bold mb-6 text-[#006600]">
         {bookingStatus} Booking Details
-      </h1>
+      </h1>          
+      <button
+            onClick={() => navigate(-1)}
+            className="px-4 py-2 border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+          >
+            Back
+          </button>
+        </div>
 
       {bookingStatus === "AVAILABLE" ? (
         // Full editable form for AVAILABLE bookings
@@ -385,15 +387,22 @@ const handleCancelBooking = async () => {
       />
     </div>
 
-    {/* Confirm Booking Button full width below the two fields */}
-    <div className="col-span-1 md:col-span-2 flex justify-center mt-4">
-      <button
-        className="bg-[#006600] text-white px-6 py-2 shadow hover:bg-green-800 transition w-full md:w-2/3"
-        onClick={handleConfirmBooking}
-      >
-        Confirm Booking
-      </button>
-    </div>
+{/* Confirm & Cancel Booking Buttons side by side */}
+<div className="col-span-1 md:col-span-2 flex justify-center mt-4 space-x-6">
+  <button
+    className="bg-[#006600] text-white px-6 py-2 shadow hover:bg-green-800 transition w-full md:w-1/3"
+    onClick={handleConfirmBooking}
+  >
+    Confirm Booking
+  </button>
+
+  <button
+    className="bg-red-600 text-white px-6 py-2 shadow hover:bg-red-700 transition w-full md:w-1/3"
+    onClick={handleCancelBooking}
+  >
+    Cancel Booking
+  </button>
+</div>
 
             </div>
           )}
@@ -402,7 +411,7 @@ const handleCancelBooking = async () => {
             <div className="col-span-1 md:col-span-2">
 <div className="flex justify-center mt-4">
   <button
-    className="bg-red-600 text-white px-6 py-2 shadow hover:bg-red-700 transition w-2/5 rounded"
+    className="bg-red-600 text-white px-6 py-2 shadow hover:bg-red-700 transition w-2/5 "
     onClick={handleCancelBooking}
   >
     Cancel Booking

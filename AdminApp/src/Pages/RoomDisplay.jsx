@@ -197,7 +197,7 @@ const RoomDisplay = () => {
     <div className="py-5">
       <button
         onClick={handleEdit}
-        className="bg-[#006600] w-full h-10 2xl:h-[50px] text-white font-Arial font-semibold px-5 hover:bg-green-700 transition"
+        className="bg-[#006600] w-full h-10 2xl:h-[50px] text-white px-5 hover:bg-green-700 transition"
       >
         Edit
       </button>

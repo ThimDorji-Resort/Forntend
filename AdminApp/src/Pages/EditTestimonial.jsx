@@ -105,7 +105,7 @@ const EditTestimonial = () => {
   };
 
   return (
-    <div className="flex justify-center min-h-screen bg-gray-50 py-8 font-inter">
+    <div className="flex justify-center min-h-screen bg-gray-50 py-3 font-inter">
       <div className="bg-white p-8 shadow-lg w-full max-w-4xl">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">

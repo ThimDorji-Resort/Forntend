@@ -20,7 +20,6 @@ import EditFacility from "./Pages/EditFacility.jsx";
 import AdminTestimonials from "./Pages/AdminTestimonials.jsx";
 import AddTestimonial from "./Pages/AddTestimonial.jsx";
 import EditTestimonial from "./Pages/EditTestimonial.jsx";
-
 import AdminLayout from "./Components/AdminLayout";
 
 const AppRouter = () => {
