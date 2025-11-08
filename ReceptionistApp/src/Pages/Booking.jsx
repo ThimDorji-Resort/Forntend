@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
 import Header from "../Components/Header";
+import {  Search } from "lucide-react";
 
 const bookingsData = [
   { id: 1, type: "DELUXE DOUBLE", floor: "EAST WING F1", status: "AVAILABLE", price: 100 },
@@ -88,15 +89,22 @@ const Booking = () => {
               ))}
             </div>
 
-            {activeTab !== "AVAILABLE" && (
-              <input
-                type="text"
-                placeholder="Search Booking No"
-                value={searchBooking}
-                onChange={(e) => setSearchBooking(e.target.value)}
-                className="border border-gray-300 px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-300 shadow-sm"
-              />
-            )}
+  {/* Search Bar */}
+  {activeTab !== "AVAILABLE" && (
+    <div className="relative w-full sm:w-64">
+      <Search
+        size={18}
+        className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+      />
+      <input
+        type="text"
+        placeholder="Search Booking No"
+        value={searchBooking}
+        onChange={(e) => setSearchBooking(e.target.value)}
+        className="w-full pl-9 pr-3 h-11 border border-gray-300 focus:border-[#006600] focus:ring-2 focus:ring-[#006600]/40 outline-none shadow-sm transition-all"
+      />
+    </div>
+  )}
           </div>
 
           {/* Table */}
